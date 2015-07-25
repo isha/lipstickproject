@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+gem 'unicorn'
+gem 'sinatra'
+gem 'liquid'
+gem 'sass'
+gem 'thin'
