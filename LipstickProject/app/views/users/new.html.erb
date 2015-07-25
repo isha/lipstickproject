@@ -71,11 +71,29 @@
       </div>
     </div>
   <% end %>
-  <p>
-    <%= f.label :recurring,  "Monthly Donation" %>
-    <%= f.check_box :recurring %>
-  </p>
+  <div class="row">
+    <div class="one column">
+      <p>
+        <%= f.check_box :recurring %>
+      </p>
+    </div>
+    <div class="four columns">
+      <p>
+        <%= f.label :recurring,  "Monthly Donation" %>
+      </p>
+    </div>
+    <div class="one column">
+      <p>
+        <%= f.check_box :recurring %>
+      </p>
+    </div>
+    <div class="four columns">
+      <p>
+        <%= f.label :accepts_marketing, "Recieve emails about stuff and stuff" %>
+      </p>
+    </div>
 
+  </div> 
   <button action="submit">Submit</button>
   <% end %>  
 </div>
