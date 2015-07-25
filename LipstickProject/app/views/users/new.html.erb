@@ -1,0 +1,39 @@
+<%= form_for :user do |f| %>
+  <p>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </p>
+
+  <p>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </p>
+
+  <p>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </p>
+  <%= f.fields_for :address do |address_form| %>
+    <li>
+      <%= address_form.label :street %>
+      <%= address_form.text_field :street %>
+    </li>
+    <li>
+      <%= address_form.label :house %>
+      <%= address_form.text_field :house %>
+    </li>
+    <li>
+      <%= address_form.label :postal_code %>
+      <%= address_form.text_field :postal_code %>
+    </li>
+    <li>
+      <%= address_form.label :city %>
+      <%= address_form.text_field :city %>
+    </li>
+    <li>
+      <%= address_form.label :province %>
+      <%= address_form.text_field :province %>
+    </li>
+  <% end %>
+  <button action="submit">Submit</button>
+<% end %>  
