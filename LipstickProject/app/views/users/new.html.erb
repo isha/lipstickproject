@@ -1,39 +1,99 @@
-<%= form_for :user do |f| %>
-  <p>
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
-  </p>
+<div class="Container header">
+  <h1> Form Title </h1>
+</div>
+<div class="container">
+  <%= form_for :user do |f| %>
+  <div class="row">
+    <div class="six columns">
+      <p>
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name, :class =>"u-full-width", :placeholder=>"First Name" %>
+      </p>  
+    </div>  
+    <div class="six columns">
+      <p>
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name, :class =>"u-full-width" , :placeholder=>"Last Name"%>
+      </p>
+    </div>  
+  </div>
+  <div class="row">
 
-  <p>
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
-  </p>
+    <p>
+      <%= f.label :email %>
+      <%= f.text_field :email, :class =>"u-full-width", :placeholder => "Email Address" %>
+    </p>
+  </div>
 
-  <p>
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </p>
   <%= f.fields_for :address do |address_form| %>
-    <li>
-      <%= address_form.label :street %>
-      <%= address_form.text_field :street %>
-    </li>
-    <li>
-      <%= address_form.label :house %>
-      <%= address_form.text_field :house %>
-    </li>
-    <li>
-      <%= address_form.label :postal_code %>
-      <%= address_form.text_field :postal_code %>
-    </li>
-    <li>
-      <%= address_form.label :city %>
-      <%= address_form.text_field :city %>
-    </li>
-    <li>
-      <%= address_form.label :province %>
-      <%= address_form.text_field :province %>
-    </li>
+    <div class="row">
+      <div class="six columns">  
+        <p>
+          <%= address_form.label :street %>
+          <%= address_form.text_field :street, :class =>"u-full-width", :placeholder=>"Street Name"%>
+        </p>
+      </div>
+      <div class="six columns">  
+        <p>
+          <%= address_form.label :house %>
+          <%= address_form.text_field :house, :class =>"u-full-width" , :placeholder=>"House or Apartment Number"%>
+        </p>
+      </div> 
+    </div>
+    <div class="row">
+      <div class="four columns">
+        <p>
+          <%= address_form.label :city %>
+          <%= address_form.text_field :city, :class =>"u-full-width" , :placeholder=>"City"%>
+        </p>
+      </div>
+      <div class="four columns">
+        <p>
+          <%= address_form.label :province %>
+          <%= address_form.text_field :province, :class =>"u-full-width" , :placeholder=>"Province"%>
+        </p>
+      </div>
+      <div class="four columns">  
+        <p>
+          <%= address_form.label :postal_code %>
+          <%= address_form.text_field :postal_code , :class =>"u-full-width", :placeholder=>"Postal Code"%>
+        </p>
+      </div>  
+    </div>
   <% end %>
+  <%= f.fields_for :donation do |donation_form| %>
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <%= donation_form.label :amount %>
+          <%= donation_form.text_field :amount , :class =>"u-full-width", :placeholder=>"Amount"%>
+        </p>
+      </div>
+    </div>
+  <% end %>
+  <div class="row">
+    <div class="one column">
+      <p>
+        <%= f.check_box :recurring %>
+      </p>
+    </div>
+    <div class="four columns">
+      <p>
+        <%= f.label :recurring,  "Monthly Donation" %>
+      </p>
+    </div>
+    <div class="one column">
+      <p>
+        <%= f.check_box :recurring %>
+      </p>
+    </div>
+    <div class="four columns">
+      <p>
+        <%= f.label :accepts_marketing, "Recieve emails about stuff and stuff" %>
+      </p>
+    </div>
+
+  </div> 
   <button action="submit">Submit</button>
-<% end %>  
+  <% end %>  
+</div>
