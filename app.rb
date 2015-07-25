@@ -2,6 +2,8 @@ require 'bundler'
 require 'net/http'
 require 'liquid'
 require 'sass'
+require 'sinatra'
+require "sinatra/activerecord"
 Bundler.require
 
 configure do

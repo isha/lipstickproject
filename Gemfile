@@ -4,3 +4,7 @@ gem 'sinatra'
 gem 'liquid'
 gem 'sass'
 gem 'thin'
+gem 'mysql'
+gem 'activerecord'
+gem "sinatra-activerecord"
+gem "rake"
