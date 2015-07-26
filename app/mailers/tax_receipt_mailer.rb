@@ -11,7 +11,7 @@ class TaxReceiptMailer < ApplicationMailer
   	kit = PDFKit.new(html)
 
   	# For testing purposes
-  	#file = kit.to_file('/Users/ishak/Desktop/tax_receipt.pdf')
+  	file = kit.to_file('/Users/ishak/Desktop/new_tax_receipt.pdf')
 
   	attachments['tax_receipt.pdf'] = kit.to_pdf
   	mail(to: @user.email, subject: 'Thank you for your donation!')

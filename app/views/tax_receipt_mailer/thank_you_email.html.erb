@@ -1,12 +1,138 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-  <head>
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
-  </head>
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META http-equiv="X-UA-Compatible" content="IE=8">
+
+<TITLE>
+	Created by BCL easyConverter SDK 3 (HTML Version)
+</TITLE>
+
+<STYLE type="text/css">
+
+body {
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+#page_1 {
+		position:relative; 
+		overflow: hidden;
+		margin: 38px 0px 638px 38px;
+		padding: 0px;
+		border: none;
+		width: 700px;
+		height: 1100px;
+		border-radius: 10px 10px 10px 10px;
+		-moz-border-radius: 10px 10px 10px 10px;
+		-webkit-border-radius: 10px 10px 10px 10px;
+		border: 2px solid #000000;
+}
+
+#page_1 #id_1 {
+		float:left;
+		border:none;
+		margin: 0px 0px 0px 20px;
+		padding: 0px;
+		border:none;
+		width: 700px;
+		overflow: hidden;
+		height: 860px;
+		border-radius: 0px 0px 0px 0px;
+		-moz-border-radius: 0px 0px 0px 0px;
+		-webkit-border-radius: 0px 0px 0px 0px;
+		border-right: 1px solid #000000;
+}
+
+#page_1 #id_2 {
+	float:left;
+	border:none;
+	margin: 20px 0px 0px 0px;
+	padding: 10px;
+	border:none;
+	width: 380px;
+	overflow: hidden;
+}
+
+#page_1 #dimg1 #img1 {
+	width:92%;
+	height:80%;
+	margin:25px;
+}
+
+.addressColumn{
+	margin-top: 140px;
+}
+
+
+.singature{
+	font: 18px 'Times New Roman';
+	color: #6d6e71;
+	line-height: 22px;
+}
+
+.singatureLine{
+		font: 13px 'Arial';
+		line-height: 0px;
+		margin-top: -36px;
+}
+
+.title{
+	font: 32px 'Arial';
+	color: #6d6e71;
+	line-height: 30px;
+	margin-bottom: 2px;
+	margin-left:0px;
+}
+.subTitle{
+	font: 16px 'Arial';
+	color: #6d6e71;
+	margin-left:3px;
+}
+
+
+p{
+	text-align: left;
+	padding-right: 87px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	font: 16px 'Arial';
+	line-height: 18px;
+	margin-left:0px;
+}
+
+
+</STYLE>
+</HEAD>
+
   <body>
-    <h2>Hi <%= @user.first_name %></h2>
-    <p>
-      Thank you for your donation of $<%= @donation.amount %> CAD to <a href="http://www.thelipstickproject.ca/">The Lipstick Project</a>. You will find a tax receipt attached to this email. 
-    </p>
+     
+    <div id="page_1">
+	<div id="dimg1">
+		<%= image_tag "thankYouEmail.jpg" %>
+	</div>	
+
+	<div id="id_1">
+		<p class="title"> Hi <%= @user.first_name %>,</p>
+		<p class="subTitle"></p>
+		<p class="ft1">You did it! Thank you for being a part of our incredible family of supporters. Your gift of XXX will make people  the best version of themselves on days when they need their inner strength the most. With your help our volunteers will bring joy and comfort with manis, massages and gentle beard trims. We are deeply grateful for your compassion. </p>
+		<br/>
+		<br/>
+		<%= image_tag "signature.png" %>
+		<p class="singatureLine">___________________________ </p><br/><br/>
+		<apan class="singature">Leigh Boyle, <br/> Exectuve Director</span>
+		<p>P.S. Your tax receipt is attached to this email. Please be in touch if you have any questions!</p>
+		<p><a href="url"><NOBR>www.thelipstickproject.ca</NOBR></a></p>
+	</div>		
+	
+</div>
+  
+
+
+
+
+
+
   </body>
 </html>
