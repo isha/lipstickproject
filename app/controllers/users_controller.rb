@@ -9,14 +9,20 @@ class UsersController < ApplicationController
     address = Address.new(user_params[:addresses])
     donation = Donation.new(user_params[:donations])
 
-    @user = User.new(user_params.except(:addresses, :donations))
+    if User.exists?(email: user_params[:email])
+      @user = User.where(email: user_params[:email]).first
+    else
+      @user = User.new(user_params.except(:addresses, :donations))
+    end
+
     @user.addresses << address
     @user.donations << donation
+    
     if @user.save
       Resque.enqueue(SendTaxReceiptEmailJob, @user.donations.last.id)
       Stripe.api_key = Rails.configuration.stripe[:secret_key]
       token = params[:stripeToken]
-      amount = @user.donations.last.amount * 100.0
+      amount = @user.donations.last.amount * 100
       # if payment is one-time
       begin
         charge = Stripe::Charge.create(
