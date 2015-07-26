@@ -3386,6 +3386,7 @@ Started GET "/resque/style.css" for ::1 at 2015-07-26 09:44:24 -0700
 
 
 Started GET "/resque/ranger.js" for ::1 at 2015-07-26 09:44:24 -0700
+<<<<<<< HEAD
 
 
 Started GET "/users/new" for ::1 at 2015-07-26 09:56:33 -0700
@@ -5659,3 +5660,7 @@ WHERE fk.referenced_column_name is not null
   AND fk.table_name = 'users'
 
   [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `users`[0m
+=======
+Processing by ApplicationController#verify as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+>>>>>>> 8944150c7f8681e80d96a0184fea31dbe163f12a
