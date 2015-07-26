@@ -26,6 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'resque'
 gem 'pdfkit'
 gem 'airbrake'
+gem 'rails_12factor'
 
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 # Use ActiveModel has_secure_password
