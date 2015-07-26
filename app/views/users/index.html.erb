@@ -6,16 +6,16 @@
       <th> Email </th>
     </tr>
     <% @users.each do |user| %>
-      <tr class="collapsible-header">
+      <tr class="collapsible-header" id="<%= user.id %>">
         <td><%= user.first_name %></td>
         <td><%= user.last_name %></td>
         <td><%= user.email %></td>
       </tr>
       <% user.donations.each do |donation| %>
-          <tr class="collapsible-body"> 
+          <tr class="collapsible-body user-<%= user.id %>" > 
             <td>Amount: <%= donation.amount %></td>
           </tr>
-          <tr class="collapsible-body">
+          <tr class="collapsible-body user-<%= user.id %>">
             <td> Tax Receipt: <%= donation.tax_receipt_sent %></td>
           </tr>
         <% end %>
