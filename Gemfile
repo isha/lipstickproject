@@ -27,6 +27,7 @@ gem 'resque'
 gem 'pdfkit'
 gem 'rails_12factor'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'kaminari'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
