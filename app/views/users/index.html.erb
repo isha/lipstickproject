@@ -4,14 +4,18 @@
   <tr>
     <th>First Name</th>
     <th>Last Name</th>
+    <th>Email Address</th>
     <th>Donation Amount</th>
+    <th>Tax Receipt Sent</th>
   </tr>
  
   <% @users.each do |user| %>
     <tr>
       <td><%= user.first_name %></td>
       <td><%= user.last_name %></td>
-      <td><%= user.donations.first.amount if user.donations.first %></td>
+      <td><%= user.email %></td>
+      <td><%= user.donations.last.amount if user.donations.last %></td>
+      <td><%= user.donations.last.tax_receipt_sent ? "Yes" : "No" %></td>
     </tr>
   <% end %>
 </table>
