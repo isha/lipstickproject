@@ -12,12 +12,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params.except(:addresses, :donations))
     @user.addresses << address
     @user.donations << donation
-    byebug
+
     if @user.save
       Resque.enqueue(SendTaxReceiptEmailJob, @user.donations.last.id)
-      byebug
       if(!@user.recurring)
-        byebug
         Stripe.api_key = "sk_test_47WSgDMSGAE8OrlTNbQQHAG4"
         token = params[:stripeToken]
         # if payment is one-time
