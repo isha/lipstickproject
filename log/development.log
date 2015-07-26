@@ -3388,3 +3388,693 @@ Started GET "/resque/style.css" for ::1 at 2015-07-26 09:44:24 -0700
 Started GET "/resque/ranger.js" for ::1 at 2015-07-26 09:44:24 -0700
 Processing by ApplicationController#verify as HTML
 Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-26 12:06:13 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users`
+  [1m[36mDonation Load (0.3ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 1  ORDER BY `donations`.`id` DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 1  ORDER BY `donations`.`id` DESC LIMIT 1  [["user_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 1  ORDER BY `donations`.`id` DESC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mDonation Load (0.3ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 2  ORDER BY `donations`.`id` DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 2  ORDER BY `donations`.`id` DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 2  ORDER BY `donations`.`id` DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mDonation Load (0.2ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 3  ORDER BY `donations`.`id` DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 3  ORDER BY `donations`.`id` DESC LIMIT 1  [["user_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 3  ORDER BY `donations`.`id` DESC LIMIT 1[0m  [["user_id", 3]]
+  [1m[35mDonation Load (0.2ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 4  ORDER BY `donations`.`id` DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 4  ORDER BY `donations`.`id` DESC LIMIT 1[0m  [["user_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 4  ORDER BY `donations`.`id` DESC LIMIT 1  [["user_id", 4]]
+  [1m[36mDonation Load (0.2ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 5  ORDER BY `donations`.`id` DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 5  ORDER BY `donations`.`id` DESC LIMIT 1  [["user_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 5  ORDER BY `donations`.`id` DESC LIMIT 1[0m  [["user_id", 5]]
+  Rendered users/index.html.erb within layouts/application (82.7ms)
+Completed 200 OK in 999ms (Views: 969.7ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/assets/custom_styles.self-9ac8679b0f12dd4d06d16c4ac1de0c6bfb5800eb62fe44b77209dbcf66289efe.css?body=1" for ::1 at 2015-07-26 12:06:15 -0700
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 12:06:55 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (130.6ms)
+Completed 200 OK in 185ms (Views: 167.6ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/users" for ::1 at 2015-07-26 12:07:21 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s7yqu/HelokyyTkMfrwthniYvDys4LdIuL+BB26lMui1evE4AMKNJbk3cKUGxb7OP/PaiVfkgUDOdk3RBACKBQ==", "user"=>{"first_name"=>"Jugh", "last_name"=>"i", "email"=>"isha.kumaarr@gmail.com", "addresses"=>{"street"=>"3020 QUEBEC ST", "house"=>"", "city"=>"VANCOUVER", "province"=>"British Columbia", "postal_code"=>"V5T3B1"}, "donations"=>{"amount"=>"20"}, "recurring"=>"0", "accepts_marketing"=>"0"}}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `users` (`first_name`, `last_name`, `email`, `accepts_marketing`, `recurring`) VALUES ('Jugh', 'i', 'isha.kumaarr@gmail.com', 0, 0)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `addresses` (`street`, `house`, `postal_code`, `city`, `province`, `user_id`, `created_at`, `updated_at`) VALUES ('3020 QUEBEC ST', '', 'V5T3B1', 'VANCOUVER', 'British Columbia', 6, '2015-07-26 19:07:21', '2015-07-26 19:07:21')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `donations` (`amount`, `user_id`, `created_at`, `updated_at`) VALUES (20, 6, '2015-07-26 19:07:21', '2015-07-26 19:07:21')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.0ms)
+** [Airbrake] Notice was not sent due to configuration:         
+  Environment Monitored? false         
+  API key set? true
+
+Redis::CommandError (MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.):
+  app/controllers/users_controller.rb:17:in `create'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (13.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (30.6ms)
+
+
+Started GET "/users" for ::1 at 2015-07-26 12:09:29 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+  [1m[35mDonation Load (0.3ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 1  ORDER BY `donations`.`id` DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 1  ORDER BY `donations`.`id` DESC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 1  ORDER BY `donations`.`id` DESC LIMIT 1  [["user_id", 1]]
+  [1m[36mDonation Load (0.2ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 2  ORDER BY `donations`.`id` DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 2  ORDER BY `donations`.`id` DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 2  ORDER BY `donations`.`id` DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mDonation Load (0.2ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 3  ORDER BY `donations`.`id` DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 3  ORDER BY `donations`.`id` DESC LIMIT 1[0m  [["user_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 3  ORDER BY `donations`.`id` DESC LIMIT 1  [["user_id", 3]]
+  [1m[36mDonation Load (0.2ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 4  ORDER BY `donations`.`id` DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 4  ORDER BY `donations`.`id` DESC LIMIT 1  [["user_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 4  ORDER BY `donations`.`id` DESC LIMIT 1[0m  [["user_id", 4]]
+  [1m[35mDonation Load (0.2ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 5  ORDER BY `donations`.`id` DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 5  ORDER BY `donations`.`id` DESC LIMIT 1[0m  [["user_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 5  ORDER BY `donations`.`id` DESC LIMIT 1  [["user_id", 5]]
+  [1m[36mDonation Load (0.2ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 6  ORDER BY `donations`.`id` DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 6  ORDER BY `donations`.`id` DESC LIMIT 1  [["user_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 6  ORDER BY `donations`.`id` DESC LIMIT 1[0m  [["user_id", 6]]
+  Rendered users/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 50ms (Views: 47.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 12:09:31 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 52ms (Views: 48.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-07-26 12:09:49 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Qzdp0CB0S72DhIkOy48Hl+KNW15eS1SG54E0/IP415RF8TJT0WhQEQh6wKez9pTfpeY966VPYo6RSPgq6V1veQ==", "user"=>{"first_name"=>"Jugh", "last_name"=>"i", "email"=>"isha.kumaarr@gmail.com", "addresses"=>{"street"=>"3020 QUEBEC ST", "house"=>"", "city"=>"VANCOUVER", "province"=>"British Columbia", "postal_code"=>"V5T3B1"}, "donations"=>{"amount"=>"20"}, "recurring"=>"0", "accepts_marketing"=>"0"}}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`first_name`, `last_name`, `email`, `accepts_marketing`, `recurring`) VALUES ('Jugh', 'i', 'isha.kumaarr@gmail.com', 0, 0)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `addresses` (`street`, `house`, `postal_code`, `city`, `province`, `user_id`, `created_at`, `updated_at`) VALUES ('3020 QUEBEC ST', '', 'V5T3B1', 'VANCOUVER', 'British Columbia', 7, '2015-07-26 19:09:49', '2015-07-26 19:09:49')
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `donations` (`amount`, `user_id`, `created_at`, `updated_at`) VALUES (20, 7, '2015-07-26 19:09:49', '2015-07-26 19:09:49')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 14ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/users/7" for ::1 at 2015-07-26 12:09:49 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mDonation Load (0.3ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 7  ORDER BY `donations`.`id` ASC LIMIT 1
+  Rendered users/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 101ms (Views: 37.5ms | ActiveRecord: 0.6ms)
+  [1m[36mDonation Load (0.3ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`id` = 7 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  Rendered tax_receipt_mailer/thank_you_email.html.erb within layouts/mailer (1.4ms)
+  Rendered tax_receipt_mailer/thank_you_email.text.erb within layouts/mailer (0.3ms)
+
+TaxReceiptMailer#thank_you_email: processed outbound mail in 1884.6ms
+
+
+Started GET "/users/" for ::1 at 2015-07-26 12:09:54 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+  [1m[35mDonation Load (0.2ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 1  ORDER BY `donations`.`id` DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 1  ORDER BY `donations`.`id` DESC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 1  ORDER BY `donations`.`id` DESC LIMIT 1  [["user_id", 1]]
+  [1m[36mDonation Load (0.2ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 2  ORDER BY `donations`.`id` DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 2  ORDER BY `donations`.`id` DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 2  ORDER BY `donations`.`id` DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mDonation Load (0.2ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 3  ORDER BY `donations`.`id` DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 3  ORDER BY `donations`.`id` DESC LIMIT 1[0m  [["user_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 3  ORDER BY `donations`.`id` DESC LIMIT 1  [["user_id", 3]]
+  [1m[36mDonation Load (0.2ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 4  ORDER BY `donations`.`id` DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 4  ORDER BY `donations`.`id` DESC LIMIT 1  [["user_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 4  ORDER BY `donations`.`id` DESC LIMIT 1[0m  [["user_id", 4]]
+  [1m[35mDonation Load (0.2ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 5  ORDER BY `donations`.`id` DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 5  ORDER BY `donations`.`id` DESC LIMIT 1[0m  [["user_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 5  ORDER BY `donations`.`id` DESC LIMIT 1  [["user_id", 5]]
+  [1m[36mDonation Load (0.2ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 6  ORDER BY `donations`.`id` DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 6  ORDER BY `donations`.`id` DESC LIMIT 1  [["user_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 6  ORDER BY `donations`.`id` DESC LIMIT 1[0m  [["user_id", 6]]
+  [1m[35mDonation Load (0.2ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 7  ORDER BY `donations`.`id` DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 7  ORDER BY `donations`.`id` DESC LIMIT 1[0m  [["user_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 7  ORDER BY `donations`.`id` DESC LIMIT 1  [["user_id", 7]]
+  Rendered users/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 50ms (Views: 47.2ms | ActiveRecord: 1.7ms)
+
+Sent mail to isha.kumaarr@gmail.com (1595.8ms)
+Date: Sun, 26 Jul 2015 12:09:53 -0700
+From: noreply@sandbox1614c4b472d24032b9930151551ba341.mailgun.org
+To: isha.kumaarr@gmail.com
+Message-ID: <55b5308194b24_172713ff16c45e460172de@isha.local.mail>
+Subject: Thank you for your donation!
+Mime-Version: 1.0
+Content-Type: multipart/mixed;
+ boundary="--==_mimepart_55b5308192735_172713ff16c45e46017138";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_55b5308192735_172713ff16c45e46017138
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_55b5308192528_172713ff16c45e460170f0";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_55b5308192528_172713ff16c45e460170f0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi Jugh
+Thanks for your donation!
+
+----==_mimepart_55b5308192528_172713ff16c45e460170f0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h2>Hi Jugh</h2>
+    <p>
+      Thank you for your donation of $20 CAD to <a href="http://www.thelipstickproject.ca/">The Lipstick Project</a>. You will find a tax receipt attached to this email. 
+    </p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_55b5308192528_172713ff16c45e460170f0--
+
+----==_mimepart_55b5308192735_172713ff16c45e46017138
+Content-Type: application/pdf;
+ charset=UTF-8;
+ filename=tax_receipt.pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+ filename=tax_receipt.pdf
+Content-ID: <55b530819584c_172713ff16c45e4601739b@isha.local.mail>
+
+JVBERi0xLjQKMSAwIG9iago8PAovVGl0bGUgKP7/AEMAcgBlAGEAdABlAGQA
+IABiAHkAIABCAEMATAAgAGUAYQBzAHkAQwBvAG4AdgBlAHIAdABlAHIAIABT
+AEQASwAgADMAIABcKABIAFQATQBMACAAVgBlAHIAcwBpAG8AbgBcKSkKL0Ny
+ZWF0b3IgKP7/AHcAawBoAHQAbQBsAHQAbwBwAGQAZgAgADAALgAxADIALgAy
+AC4AMSkKL1Byb2R1Y2VyICj+/wBRAHQAIAA0AC4AOAAuADYpCi9DcmVhdGlv
+bkRhdGUgKEQ6MjAxNTA3MjYxMjA5NTMtMDcnMDAnKQo+PgplbmRvYmoKMyAw
+IG9iago8PAovVHlwZSAvRXh0R1N0YXRlCi9TQSB0cnVlCi9TTSAwLjAyCi9j
+YSAxLjAKL0NBIDEuMAovQUlTIGZhbHNlCi9TTWFzayAvTm9uZT4+CmVuZG9i
+ago0IDAgb2JqClsvUGF0dGVybiAvRGV2aWNlUkdCXQplbmRvYmoKOCAwIG9i
+ago8PAovVHlwZSAvQ2F0YWxvZwovUGFnZXMgMiAwIFIKPj4KZW5kb2JqCjUg
+MCBvYmoKPDwKL1R5cGUgL1BhZ2UKL1BhcmVudCAyIDAgUgovQ29udGVudHMg
+OSAwIFIKL1Jlc291cmNlcyAxMSAwIFIKL0Fubm90cyAxMiAwIFIKL01lZGlh
+Qm94IFswIDAgNjEyIDc5Ml0KPj4KZW5kb2JqCjExIDAgb2JqCjw8Ci9Db2xv
+clNwYWNlIDw8Ci9QQ1NwIDQgMCBSCi9DU3AgL0RldmljZVJHQgovQ1NwZyAv
+RGV2aWNlR3JheQo+PgovRXh0R1N0YXRlIDw8Ci9HU2EgMyAwIFIKPj4KL1Bh
+dHRlcm4gPDwKPj4KL0ZvbnQgPDwKL0Y2IDYgMCBSCi9GNyA3IDAgUgo+Pgov
+WE9iamVjdCA8PAo+Pgo+PgplbmRvYmoKMTIgMCBvYmoKWyBdCmVuZG9iago5
+IDAgb2JqCjw8Ci9MZW5ndGggMTAgMCBSCi9GaWx0ZXIgL0ZsYXRlRGVjb2Rl
+Cj4+CnN0cmVhbQp4nO1dTW/jNhC961fwXCAKP0USKArETlKghwJBDPRQ9FBk
++4HFZtF0D/37lUxKkUQ9WtLasuXlLrCOOOJw+ObNiCZH2dsfn38nf30ht9vn
+f8iL/9w+ZzSnBXV/SPX3pt2gJNHCkJfX7I28ZU/ZU/lv9fmWsWJ/t/8ob6j1
+Oi1fXj5nt27EzLU8b38uf/qPcPJTefWR/Ppb+fHB66xueM2MpOXglHJeXn5q
+XzImjMq5lbJsp/3L6ua/s1++I58rw2glYExbZ2D38mIMFZblTBfSsAMahVU8
+L2fATdne6oXaFwRjNWCf0tDVgLBuxtFcK6epzDjgZ9C1TGBMEi4oEZqSf//I
+nsfz9yuGXZ7DX2Vs4nHKnClzJsadG+zEuCth3KrAGD1GC6SOLtSeQjx9STtb
+GCagU4inED8781KILwS0pCyXmipriTUm50IJzsrBuLUqV8YI1m7/1G4XlBdV
+30KX7S09qL2jJ0V/iv4U/ecGOkX/Zfh6NYam6L8ioK82+kMhfxe+RbRudtnt
+Y0GYIrs/CduLb9zH7rUEsbxgnOw+kO9L7NkPZPcxM7nghnG1Pwr2Ej5DIqBE
+7iVM5kwVXYmCfYq9ROfq/ZjaS/Re0ihrSQyUYKuxNgv74HHu3ExbLRs4Dzf3
+h10Zdyf0tpD1eNvAtns4wwcoeUTzYRT1YZhnh9AZ0sY9+tZIoTsSgfzCZH/u
+TPmW3LgBxng3RBDyihXBvVAv09Mjh5lF2KOKejyL8JoluYMYz4lHzBXHLzEg
+2UIJjooZOQmPE4mkByiBtkWiAsflI7QN52VodQQD7G2s7f6I/C4gv43243Hq
+bXTohV43uKHJb8ZS8HwLJBz3MciShktKFqbj4yZfh9rqnJUXmlWdwuwf9sHa
+HvtTp+jWCCibPqAQJc9qNcBdAVGSaMbsmE9cyCn+vr4S0Pt8usRn/CFA4TiY
+SxzbJqdbgPtELPBPYFbTeYxkBm4RRPUR+SAgH5SpLamfH3zPy7aNSfLtSfa8
+a4iVS66lotbQ6mfBhOZK2urn+qL75XHE/YfZPHHQPdc14XSI68yyNtn9l0vG
+c05Fd4HdBKTLCEEiUwMPuGABT1XQ4mBV/RUJaxY4/azU7myDljtoDG/ljbP5
+oajqG1HOKX3huaY9C7V7gAYADkiadQajtruW5AZqs1BivLbA3f5JbQee7hRp
+436c91s3yNjIBAUyid8hk/imNzBWX69q+0QcgoBBJRPGgwjzZvXn0Rnh4+ab
+RBGs1o8yY+ha1gqr6Zvfy+XPM26cr3aSl7bpviSQacP+W9iwT8d16yVlOq5b
+COhWNLdg6AzWqbdrj6qlzqkylveyAmjv6EnRn6I/Rf+5gU7Rfxm+Xo2hKfqv
+COirjf71beEWRPChrcNq2/BGNJtH7oCQy/rkhDQSeECIJX7DSQ/s07nNo/0v
+lTh4r7OJ6Vzb7tEQ26A+3Ou3wXES1uZ3+1o2UXz45bbFuAg22eo96lB/OGd8
+L0aDQftp+2jrnFvUFvKsUF3OlJmp6Be50Hr7MigpcHuFRS7cJiLt+2lI29Zv
+bAYHMv7Ae2Ac7ycLy50G+ggvUTnYch8aB1rtPTkkuUfaPHsHrI6gA7X5PepJ
+Xohog7j585shqzFuQ0dpI9L3MQ77uVXlFa0rSERz4OWPuvvEG6jb8NQfqjrR
+UIJP1HHJBa71wOPAqgzRPv86IbTNk+j80GIA62gPDxln1cbg0htoteAz5gMt
+4As5t6jrUuszqrDaAwOIYYqADmuJIjBhd8wgxMGImuRCTH1cG4W1CV8PNIKj
+HBci2WW4Y8wauAMZgvM0lkQsgKw6XLl41Ew+WEW8dxiXdTlCWCBfh0uZ213l
+auiOKQXluHD90GsDk15PmFNY3MTNhD5CTrfg9C8WOKcWTY3JA4I24kJYrxyp
+v8cuhHXRHL9hgOvxcZU1JF6k/hprg+hEKs1nvDGzVJQbHOV8zisgc15PmUMR
+GJcY7IWWwIKKg0+6467tZ1WfL1wh3wZ/jZtvMYcXDWSwCHpW4f6MxUhknBlF
+3RHKjX8fILJ2m8GwyNqtTmDBOwSRxe8Mq4P3KXx5oxlho1AH1qTn3/wb5Lk0
+tsNzC5fwcyR30KXBqyt4RY2/22HMYZ/IOIFJ0PoI7cYrCW6NTLQYr8TOmDl+
+MgVfUSDkEUyCjIIPLKAS0dpaTOWo1zXJSztYTuWo6VD6FL5Yja9XY+ilZY6p
+YCSg0y+HTCF+dualEE8hnkL8qpm35hBfjSNXDvLR/jutt/gpxBN5yv4HmGR3
+7wplbmRzdHJlYW0KZW5kb2JqCjEwIDAgb2JqCjE3MDAKZW5kb2JqCjEzIDAg
+b2JqCjw8IC9UeXBlIC9Gb250RGVzY3JpcHRvcgovRm9udE5hbWUgL1FOQUFB
+QStBcmlhbE1UCi9GbGFncyA0IAovRm9udEJCb3ggWy02NjQuNTUwNzgxIC00
+MjUuMjkyOTY4IDIwMDAgOTA1LjI3MzQzNyBdCi9JdGFsaWNBbmdsZSAwIAov
+QXNjZW50IDkwNS4yNzM0MzcgCi9EZXNjZW50IC0yMTEuOTE0MDYyIAovQ2Fw
+SGVpZ2h0IDcxNi4zMDg1OTMgCi9TdGVtViA3My4yNDIxODc1IAovRm9udEZp
+bGUyIDE0IDAgUgo+PgplbmRvYmoKMTQgMCBvYmoKPDwKL0xlbmd0aDEgODY0
+OCAKL0xlbmd0aCAxNyAwIFIKL0ZpbHRlciAvRmxhdGVEZWNvZGUKPj4Kc3Ry
+ZWFtCnicpTgJWFNXuufce0NwJ7JEBeTGQAIqawhh3xfZVEgImwqBJCQQEggJ
+S8UFRcSlWp2qtR13Z6ytWytOK110rOPMa8c6tp1pa6ttZ7q3068z86avoyS8
+/54bMPr65vve97ice//zn3P+8+/nP0EYIeSL1iMaoWXq2AS/hJVdgNkOrbHF
+0meUMV+PAvwtQgExJoNOb1xUHIZQYAjgkkyAmPmDewj6GuiHm9odvV8+4v8E
+9Huh/6HF1qzb9f3eUwgFceMd7breDpSGiqB/FfqsVdduEER+cxn6nyI09VNE
+08P4MSRAvoInBQqEcDD/pW8iIzXbV0BN82Eo7o/5GC0cv4x684DKFGhIU57H
+omzEjo8J3nZXYIUwEz+fjfD4+DhCjEzwErcbYhDFCSuAB6QVIiQRSUQR8MIw
+NMbSl8eyBegeYhlgCKN0WCkUXEZyhCICJTJVEv8oE+Uy6QKhj1AOHUWCOCgw
+ADr8wwjHVJQ4XL38qe+qNGXlqzeWL8UXZ6/pv/n26tXhEZVVvz4aExt6+nR2
+RnNj49rXHHZja2nx0qVb/d+0Wpzdp2o12pUNx7bEJsQhCpWNf84Ewu7hKAmY
+EcrkMvkCssfErmRHqY9c5k/xGOwjDhIHKRLus0jfOz93UUlrdbY2LgFnN6w0
+nV+/FqdmtJgGP9mxE+ODw1+d6mh3JeMoeVHhsk51ZUXF6keqtIx6ZmtcGY7L
+6u75sDkubnDo5tbunqwsfOIXuB8/feVpXdPYnZVV2kXRK+oP7autrq4FXVaO
+f8HMBW7DUBzKBX6BXaXMi9EgXk3SBXKZCvD+Ph5GZTyjgTThXeWFwq2dyiTs
+6Lp02enEiUntm4sKNw29d2twCOOSJU04P6+tJT8X5xUYTXn5qVgWvmSJekCj
+wVXVG9ZXaujgyPLStkPWdlvnIWNpeWS0rmn4lXXrB9b9ekdTI9aYcnNzsxub
+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
+hIYtHjmtk1zwKyb4sHvN7SC+oQeOm8kevD56CN+cRn5aBr7PzW2G3ZxEI3ri
++Q9rglthIVAkzI+CL+dRTR6+f5q29f8h+33q+knb24m/TNhywi9/SgJvX32Q
+rzQvG3GS8LI4yH4THs/R52XVA6aHSG4jUfTvPEH3gNUNHs9/2P85rTpgnpOs
+5LjtnvRmng430wIz/p0PxZxkE+LiklmNycCW26w2R1+Hgc2z2Ttsdp3DbLPG
+sDkWC1tpbjE5uthKQ5fB3m3Qx+TYzTpLpaHFadHZJ1alEiTrwaZqDfYuWM8q
+Y+KS2Mhyc7Pd1mUzOqLIrHINP9ncxepYh12nN7Tr7G2szfi/8sGarawDxqqs
+ZodBz6odOocBFlv1sTY7a4MRO9tsc1oddrOhK2aSgIZ75dt1PWZrC7vMaDQ3
+G9hottLWBNSWmptNNouuazG7XAfLms06Vq1zWvXANxufkpxQa3Oy7bo+1tll
+gJ2BU6PN6mAdNlZv7uqwwABsznbYzYBshhEDfHVdbIfB3m52cCw29RGGLbCn
+lSMBAxwNO8F22G16Z7ODk6rHBIx47QBfs7XZ4tSDntkJJmxWSx8baY5iDe1N
+QNtrtvXf7k6m6znp7YYuTkpOl/c34LXqoZVGJIo0wy4OQzuneLsZdtXbeqwW
+m07/oBJ0vOig9kn925yODqeD1Ru6OTXDHJPB0vGghmIgr9pIvOpIJECk4hng
+ia3gi1+RzD0xxp8CXHRxUaSnn6Sfo1+hL0G7SI/Sp7zo6Eh2m+h/Aj3vPQwP
+UCK0Hhi3oj5mPhPPlDJFTAa8Ux6gZIX1S2FeN4lZ/mQx4XP4CJSTXCbhTkq7
+5xTS/Tc3Ux3ACmVuZHN0cmVhbQplbmRvYmoKMTcgMCBvYmoKNTg1NQplbmRv
+YmoKMTUgMCBvYmoKPDwgL1R5cGUgL0ZvbnQKL1N1YnR5cGUgL0NJREZvbnRU
+eXBlMgovQmFzZUZvbnQgL0FyaWFsTVQKL0NJRFN5c3RlbUluZm8gPDwgL1Jl
+Z2lzdHJ5IChBZG9iZSkgL09yZGVyaW5nIChJZGVudGl0eSkgL1N1cHBsZW1l
+bnQgMCA+PgovRm9udERlc2NyaXB0b3IgMTMgMCBSCi9DSURUb0dJRE1hcCAv
+SWRlbnRpdHkKL1cgWzAgWzc0NCA1NTEgNTUxIDU1MSA5MzYgNTUxIDQ5NiAy
+NzUgMjc1IDU1MSA2NjEgNDk2IDY2MSA1NTEgNTUxIDQ5NiA1NTEgNTUxIDMz
+MCAyNzUgNjYxIDcxNiA2NjEgNTUxIDU1MSA3MTYgMjc1IDIyMCAyMjAgNTUx
+IDQ5NiAyMjAgMjc1IDU1MSA1NTEgNTUxIDU1MSA3MTYgNTUxIDU1MSA1NTEg
+NDk2IDY2MSA0OTYgNzE2IDc3MSAyNzUgNjA1IDgyNiA3NzEgMjc1IDQ5NiA1
+NTEgMzMwIDI3NSBdCl0KPj4KZW5kb2JqCjE2IDAgb2JqCjw8IC9MZW5ndGgg
+NzQyID4+CnN0cmVhbQovQ0lESW5pdCAvUHJvY1NldCBmaW5kcmVzb3VyY2Ug
+YmVnaW4KMTIgZGljdCBiZWdpbgpiZWdpbmNtYXAKL0NJRFN5c3RlbUluZm8g
+PDwgL1JlZ2lzdHJ5IChBZG9iZSkgL09yZGVyaW5nIChVQ1MpIC9TdXBwbGVt
+ZW50IDAgPj4gZGVmCi9DTWFwTmFtZSAvQWRvYmUtSWRlbnRpdHktVUNTIGRl
+ZgovQ01hcFR5cGUgMiBkZWYKMSBiZWdpbmNvZGVzcGFjZXJhbmdlCjwwMDAw
+PiA8RkZGRj4KZW5kY29kZXNwYWNlcmFuZ2UKMiBiZWdpbmJmcmFuZ2UKPDAw
+MDA+IDwwMDAwPiA8MDAwMD4KPDAwMDE+IDwwMDM2PiBbPDAwMzI+IDwwMDM2
+PiA8MDAzOD4gPDAwNTc+IDwwMDY1PiA8MDA3Mz4gPDAwNzQ+IDwwMDA5PiA8
+MDA2OD4gPDAwNDE+IDwwMDc2PiA8MDA1Nj4gPDAwNjE+IDwwMDZFPiA8MDA2
+Mz4gPDAwNkY+IDwwMDc1PiA8MDA3Mj4gPDAwMkM+IDwwMDQyPiA8MDA0Mz4g
+PDAwNEI+IDwwMDMxPiA8MDAzNz4gPDAwNzc+IDwwMDJFPiA8MDA2Qz4gPDAw
+Njk+IDwwMDcwPiA8MDA2Qj4gPDAwNkE+IDwwMDQ5PiA8MDA2ND4gPDAwMzA+
+IDwwMDMzPiA8MDAzOT4gPDAwNTI+IDwwMDVGPiA8MDA0Qz4gPDAwNjc+IDww
+MDc5PiA8MDA0NT4gPDAwNzg+IDwwMDQ0PiA8MDA0Rj4gPDAwNjY+IDwwMDU0
+PiA8MDA2RD4gPDAwNDc+IDwwMDNBPiA8MDA0QT4gPDAwNjI+IDwwMDJEPiA8
+MDAyRj4gXQplbmRiZnJhbmdlCmVuZGNtYXAKQ01hcE5hbWUgY3VycmVudGRp
+Y3QgL0NNYXAgZGVmaW5lcmVzb3VyY2UgcG9wCmVuZAplbmQKCmVuZHN0cmVh
+bQplbmRvYmoKNiAwIG9iago8PCAvVHlwZSAvRm9udAovU3VidHlwZSAvVHlw
+ZTAKL0Jhc2VGb250IC9BcmlhbE1UCi9FbmNvZGluZyAvSWRlbnRpdHktSAov
+RGVzY2VuZGFudEZvbnRzIFsxNSAwIFJdCi9Ub1VuaWNvZGUgMTYgMCBSPj4K
+ZW5kb2JqCjE4IDAgb2JqCjw8IC9UeXBlIC9Gb250RGVzY3JpcHRvcgovRm9u
+dE5hbWUgL1FTQUFBQStUaW1lc05ld1JvbWFuUFNNVAovRmxhZ3MgNCAKL0Zv
+bnRCQm94IFstNTY4LjM1OTM3NSAtNDIyLjM2MzI4MSAyMDAwIDg5MS4xMTMy
+ODEgXQovSXRhbGljQW5nbGUgMCAKL0FzY2VudCA4OTEuMTEzMjgxIAovRGVz
+Y2VudCAtMjE2LjMwODU5MyAKL0NhcEhlaWdodCA2NjIuMTA5Mzc1IAovU3Rl
+bVYgNDguODI4MTI1MCAKL0ZvbnRGaWxlMiAxOSAwIFIKPj4KZW5kb2JqCjE5
+IDAgb2JqCjw8Ci9MZW5ndGgxIDQ4NjQgCi9MZW5ndGggMjIgMCBSCi9GaWx0
+ZXIgL0ZsYXRlRGVjb2RlCj4+CnN0cmVhbQp4nJVWe2xb1Rk/x9fXdl523MR2
+Ho5z7MROmnfsOE7SponzKC1pHjSP0rWs3NjX8S2Or2vfPEy3tjzbia4C1DGt
+ggEaaKsGgw02xja2Ck3T/hiIv8YEkzY2hDSN/8a0CRJn3zn3OnXbDDZb9/j3
+nfM9f+c75xphhJAJnUMcQtOznf6K+TtFmLkIz91LiWzsB/LvzwP+GCFDZVwU
+otHOA28jZIQp1BuHidLLuTtA7gO5Mb6srLckdG+CfBzktoQcEUx1RVmQL4Bc
+tSysp5AFnQT5GZBJUlgWn/uNCLrGawiV7EMcF8SPIh6Z+Ct8ACHsVX+5Z1BM
+twvzOp2B4/W8jtP/GbVsXUPrYfBSRFOZmxwlaBiRrQ3+Ym4/Dhjd+OfDCG9t
+bYH1Zf4QjYb0SIedCPFOHiZpCW6r2+qFATv1aINw1zaGefQZInpIBqPdCOlf
+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
+APTdUZYZYTxRPyusZ9R6VT5jzKPC6qNyitW0zFjI87DIbPMcjQNLh6ArVdt0
+wUqK7XkUokSYR5XbNRYrAuPOcVWZ6kag3hVWRZTpyjBG2XqK9V12exfUWJLm
+IaL5UqunZ4bcUrnM2Myy/pSgHwnrnsXtWDvllbzF9//O0nXv0e19TrPeULsk
+st2DO1d/vS9vzGtPAQe0ErUWhcXLdzf1r9YahZk1VrnMTszOlapMCzewKmpd
+fnOvU1YV0FthljTb1e3OVf1QzQRofO4eXSX+rq4+MhcXyaSclJVsSiSjcjol
+pwVFkpMdJJxIkMPSUlzJkMNiRkyvitGOOWlZzJApcY0clpeF5GFxaSUhpPP2
+AzctE219YEFMZ8AnCXZ0BUnzpBRJyxk5puxm+qDOtGdmJ+dudiBliECUtBAV
+l4X0PUSO/dd8iZQkCqzNJyVFjJJZRVDAk5CMdsppIsNKmkTklaSSlsRMx7aD
+OTqMpYU1KblEpmMxKSKSdmqcTIhZiJOWMnKyjSxIEQXcHBLSUTGpkO7+gP+o
+vEKWhSxZyYgQF/KMybAiZEhKTC9LCs1hMcsyGp8/FIbVNBNSaTm6ElFotmtx
+KRIvsIVfKRlJrETBVJFJVMqkEhAASgArCRQioAXhOwjJB5eTiSxplnYTcXmR
+Wl33lcxr75gSU4/SmtNiBiiJUAYLwjMuNV97WAbNEkRRxGVKd1qCqFF5LZmQ
+hcKgkLSgpgpkb7MuryipFYVExVVKLujExUTqporgbSOz0yywcwLnGJdBn56E
+Tv0bu8Pza/lbOarettwV7ofcG9yv4Hmd+xn3QoEfqi1tyx+AVBhDvMGTenMX
+ridRVu/Sd+sn9LfpB2Hsv8FTEuynQG+VnWj1HRPHL+Nn4Y8qvWfCoJnW3kcC
+Qv8BUkSk4wplbmRzdHJlYW0KZW5kb2JqCjIyIDAgb2JqCjI4MTYKZW5kb2Jq
+CjIwIDAgb2JqCjw8IC9UeXBlIC9Gb250Ci9TdWJ0eXBlIC9DSURGb250VHlw
+ZTIKL0Jhc2VGb250IC9UaW1lc05ld1JvbWFuUFNNVAovQ0lEU3lzdGVtSW5m
+byA8PCAvUmVnaXN0cnkgKEFkb2JlKSAvT3JkZXJpbmcgKElkZW50aXR5KSAv
+U3VwcGxlbWVudCAwID4+Ci9Gb250RGVzY3JpcHRvciAxOCAwIFIKL0NJRFRv
+R0lETWFwIC9JZGVudGl0eQovVyBbMCBbNzcxIDYwNSA0NDAgMjc1IDQ5NiA0
+OTYgMjQ4IDY2MSA0OTYgNDk2IDI3NSBdCl0KPj4KZW5kb2JqCjIxIDAgb2Jq
+Cjw8IC9MZW5ndGggNDM0ID4+CnN0cmVhbQovQ0lESW5pdCAvUHJvY1NldCBm
+aW5kcmVzb3VyY2UgYmVnaW4KMTIgZGljdCBiZWdpbgpiZWdpbmNtYXAKL0NJ
+RFN5c3RlbUluZm8gPDwgL1JlZ2lzdHJ5IChBZG9iZSkgL09yZGVyaW5nIChV
+Q1MpIC9TdXBwbGVtZW50IDAgPj4gZGVmCi9DTWFwTmFtZSAvQWRvYmUtSWRl
+bnRpdHktVUNTIGRlZgovQ01hcFR5cGUgMiBkZWYKMSBiZWdpbmNvZGVzcGFj
+ZXJhbmdlCjwwMDAwPiA8RkZGRj4KZW5kY29kZXNwYWNlcmFuZ2UKMiBiZWdp
+bmJmcmFuZ2UKPDAwMDA+IDwwMDAwPiA8MDAwMD4KPDAwMDE+IDwwMDBBPiBb
+PDAwNEM+IDwwMDY1PiA8MDA2OT4gPDAwNjc+IDwwMDY4PiA8MDAwOT4gPDAw
+NDI+IDwwMDZGPiA8MDA3OT4gPDAwNkM+IF0KZW5kYmZyYW5nZQplbmRjbWFw
+CkNNYXBOYW1lIGN1cnJlbnRkaWN0IC9DTWFwIGRlZmluZXJlc291cmNlIHBv
+cAplbmQKZW5kCgplbmRzdHJlYW0KZW5kb2JqCjcgMCBvYmoKPDwgL1R5cGUg
+L0ZvbnQKL1N1YnR5cGUgL1R5cGUwCi9CYXNlRm9udCAvVGltZXNOZXdSb21h
+blBTTVQKL0VuY29kaW5nIC9JZGVudGl0eS1ICi9EZXNjZW5kYW50Rm9udHMg
+WzIwIDAgUl0KL1RvVW5pY29kZSAyMSAwIFI+PgplbmRvYmoKMiAwIG9iago8
+PAovVHlwZSAvUGFnZXMKL0tpZHMgClsKNSAwIFIKXQovQ291bnQgMQovUHJv
+Y1NldCBbL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUNdCj4+CmVuZG9iagp4
+cmVmCjAgMjMKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMDA5IDAwMDAw
+IG4gCjAwMDAwMTQyMTEgMDAwMDAgbiAKMDAwMDAwMDI2NyAwMDAwMCBuIAow
+MDAwMDAwMzYyIDAwMDAwIG4gCjAwMDAwMDA0NDggMDAwMDAgbiAKMDAwMDAw
+OTk5OSAwMDAwMCBuIAowMDAwMDE0MDY4IDAwMDAwIG4gCjAwMDAwMDAzOTkg
+MDAwMDAgbiAKMDAwMDAwMDc2NCAwMDAwMCBuIAowMDAwMDAyNTM5IDAwMDAw
+IG4gCjAwMDAwMDA1NjggMDAwMDAgbiAKMDAwMDAwMDc0NCAwMDAwMCBuIAow
+MDAwMDAyNTYwIDAwMDAwIG4gCjAwMDAwMDI4MTEgMDAwMDAgbiAKMDAwMDAw
+ODc3OCAwMDAwMCBuIAowMDAwMDA5MjA1IDAwMDAwIG4gCjAwMDAwMDg3NTcg
+MDAwMDAgbiAKMDAwMDAxMDEzMiAwMDAwMCBuIAowMDAwMDEwMzkzIDAwMDAw
+IG4gCjAwMDAwMTMzMjEgMDAwMDAgbiAKMDAwMDAxMzU4MiAwMDAwMCBuIAow
+MDAwMDEzMzAwIDAwMDAwIG4gCnRyYWlsZXIKPDwKL1NpemUgMjMKL0luZm8g
+MSAwIFIKL1Jvb3QgOCAwIFIKPj4Kc3RhcnR4cmVmCjE0MzA5CiUlRU9GCg==
+
+----==_mimepart_55b5308192735_172713ff16c45e46017138--
+
+  [1m[36mDonation Load (0.4ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`id` = 7 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `donations` SET `tax_receipt_sent` = 1, `updated_at` = '2015-07-26 19:09:55' WHERE `donations`.`id` = 7[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+
+
+Started GET "/resque" for ::1 at 2015-07-26 12:10:03 -0700
+
+
+Started GET "/resque/overview" for ::1 at 2015-07-26 12:10:03 -0700
+
+
+Started GET "/resque/style.css" for ::1 at 2015-07-26 12:10:04 -0700
+
+
+Started GET "/resque/jquery.relatize_date.js" for ::1 at 2015-07-26 12:10:04 -0700
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for ::1 at 2015-07-26 12:10:04 -0700
+
+
+Started GET "/resque/ranger.js" for ::1 at 2015-07-26 12:10:04 -0700
+
+
+Started GET "/resque/reset.css" for ::1 at 2015-07-26 12:10:04 -0700
+
+
+Started GET "/resque/poll.png" for ::1 at 2015-07-26 12:10:04 -0700
+
+
+Started GET "/resque/overview" for ::1 at 2015-07-26 12:10:08 -0700
+
+
+Started GET "/resque/reset.css" for ::1 at 2015-07-26 12:10:08 -0700
+
+
+Started GET "/resque/style.css" for ::1 at 2015-07-26 12:10:08 -0700
+
+
+Started GET "/resque/ranger.js" for ::1 at 2015-07-26 12:10:08 -0700
+
+
+Started GET "/resque/jquery.relatize_date.js" for ::1 at 2015-07-26 12:10:08 -0700
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for ::1 at 2015-07-26 12:10:08 -0700
+
+
+Started GET "/resque/working" for ::1 at 2015-07-26 12:10:11 -0700
+
+
+Started GET "/resque/reset.css" for ::1 at 2015-07-26 12:10:11 -0700
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for ::1 at 2015-07-26 12:10:11 -0700
+
+
+Started GET "/resque/ranger.js" for ::1 at 2015-07-26 12:10:11 -0700
+
+
+Started GET "/resque/style.css" for ::1 at 2015-07-26 12:10:11 -0700
+
+
+Started GET "/resque/jquery.relatize_date.js" for ::1 at 2015-07-26 12:10:11 -0700
+
+
+Started GET "/resque/overview" for ::1 at 2015-07-26 12:10:12 -0700
+
+
+Started GET "/resque/reset.css" for ::1 at 2015-07-26 12:10:12 -0700
+
+
+Started GET "/resque/style.css" for ::1 at 2015-07-26 12:10:12 -0700
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for ::1 at 2015-07-26 12:10:12 -0700
+
+
+Started GET "/resque/ranger.js" for ::1 at 2015-07-26 12:10:12 -0700
+
+
+Started GET "/resque/jquery.relatize_date.js" for ::1 at 2015-07-26 12:10:12 -0700
+
+
+Started GET "/resque/working" for ::1 at 2015-07-26 12:10:13 -0700
+
+
+Started GET "/resque/reset.css" for ::1 at 2015-07-26 12:10:13 -0700
+
+
+Started GET "/resque/style.css" for ::1 at 2015-07-26 12:10:13 -0700
+
+
+Started GET "/resque/ranger.js" for ::1 at 2015-07-26 12:10:13 -0700
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for ::1 at 2015-07-26 12:10:13 -0700
+
+
+Started GET "/resque/jquery.relatize_date.js" for ::1 at 2015-07-26 12:10:13 -0700
+
+
+Started GET "/users/" for ::1 at 2015-07-26 12:10:31 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+  [1m[35mDonation Load (0.6ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 1  ORDER BY `donations`.`id` DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 1  ORDER BY `donations`.`id` DESC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 1  ORDER BY `donations`.`id` DESC LIMIT 1  [["user_id", 1]]
+  [1m[36mDonation Load (0.4ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 2  ORDER BY `donations`.`id` DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 2  ORDER BY `donations`.`id` DESC LIMIT 1  [["user_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 2  ORDER BY `donations`.`id` DESC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mDonation Load (0.4ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 3  ORDER BY `donations`.`id` DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 3  ORDER BY `donations`.`id` DESC LIMIT 1[0m  [["user_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 3  ORDER BY `donations`.`id` DESC LIMIT 1  [["user_id", 3]]
+  [1m[36mDonation Load (0.2ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 4  ORDER BY `donations`.`id` DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 4  ORDER BY `donations`.`id` DESC LIMIT 1  [["user_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 4  ORDER BY `donations`.`id` DESC LIMIT 1[0m  [["user_id", 4]]
+  [1m[35mDonation Load (0.2ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 5  ORDER BY `donations`.`id` DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 5  ORDER BY `donations`.`id` DESC LIMIT 1[0m  [["user_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 5  ORDER BY `donations`.`id` DESC LIMIT 1  [["user_id", 5]]
+  [1m[36mDonation Load (0.2ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 6  ORDER BY `donations`.`id` DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 6  ORDER BY `donations`.`id` DESC LIMIT 1  [["user_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 6  ORDER BY `donations`.`id` DESC LIMIT 1[0m  [["user_id", 6]]
+  [1m[35mDonation Load (0.2ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 7  ORDER BY `donations`.`id` DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 7  ORDER BY `donations`.`id` DESC LIMIT 1[0m  [["user_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 7  ORDER BY `donations`.`id` DESC LIMIT 1  [["user_id", 7]]
+  Rendered users/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 51ms (Views: 48.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/resque/working" for ::1 at 2015-07-26 12:11:32 -0700
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for ::1 at 2015-07-26 12:11:32 -0700
+
+
+Started GET "/resque/style.css" for ::1 at 2015-07-26 12:11:32 -0700
+
+
+Started GET "/resque/jquery.relatize_date.js" for ::1 at 2015-07-26 12:11:32 -0700
+
+
+Started GET "/resque/reset.css" for ::1 at 2015-07-26 12:11:32 -0700
+
+
+Started GET "/resque/ranger.js" for ::1 at 2015-07-26 12:11:32 -0700

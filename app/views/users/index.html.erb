@@ -15,7 +15,7 @@
       <td><%= user.last_name %></td>
       <td><%= user.email %></td>
       <td><%= user.donations.last.amount if user.donations.last %></td>
-      <td><%= user.donations.tax_receipt_sent ? "Yes" : "No" %></td>
+      <td><%= user.donations.last.tax_receipt_sent ? "Yes" : "No" %></td>
     </tr>
   <% end %>
 </table>
