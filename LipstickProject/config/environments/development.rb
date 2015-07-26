@@ -38,4 +38,18 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  config.action_mailer.delivery_method = :smtp
+
+  config.middleware.use PDFKit::Middleware
+
+  config.action_mailer.smtp_settings = {
+    :authentication => :plain,
+    :address => "smtp.mailgun.org",
+    :port => 587,
+    :domain => "sandbox1614c4b472d24032b9930151551ba341.mailgun.org",
+    :user_name => "postmaster@sandbox1614c4b472d24032b9930151551ba341.mailgun.org",
+    :password => "709eac971811379a80fd81f189c38027"
+  }
 end
+
