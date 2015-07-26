@@ -41,3 +41,16 @@ body {
 .show {
 	display: block;
 }
+.after-donation{
+	position: relative;
+}
+.after-donation::after {	
+	content: 'CAD';
+	position:absolute;
+	top:7px;
+	right:10px;
+	opacity: 0.5;
+}
+
+
+
