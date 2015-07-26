@@ -2,7 +2,7 @@
   <h1> Form Title </h1>
 </div>
 <div class="container">
-  <%= form_for :user do |f| %>
+  <%= form_for :user, url: users_path do |f| %>
   <div class="row">
     <div class="six columns">
       <p>
@@ -84,7 +84,7 @@
     </div>
     <div class="one column">
       <p>
-        <%= f.check_box :recurring %>
+        <%= f.check_box :accepts_marketing %>
       </p>
     </div>
     <div class="four columns">
