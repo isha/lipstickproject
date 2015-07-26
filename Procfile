@@ -1,2 +1,2 @@
 web: bundle exec rails server webrick -p $PORT -e $RACK_ENV
-worker: bundle exec rake resque:work QUEUE=default
+worker: env TERM_CHILD=1 RESQUE_TERM_TIMEOUT=6 QUEUES=default bundle exec rake environment resque:work
