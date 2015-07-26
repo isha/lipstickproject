@@ -9,8 +9,10 @@ Rails.application.routes.draw do
   resources :users 
   resources :donations
 
+  get '/thankyou', :to => redirect('/thankyou.html')
   mount Resque::Server.new, at: "/resque"
 
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -1,7 +1,38 @@
+
 <div class="Container header">
   <h1> Form Title </h1>
 </div>
-<div class="container">
+<div class="container first_form_view">
+    <div class="row" style="text-align: center">
+      <h4>Sentence about donating </h4>
+    </div>
+    <div class="row"> 
+      <div class="offset-by-two two columns">
+        <button class="donation-amount u-full-width" val="20">$20</button>
+      </div>
+      <div class="two columns">
+        <button class="donation-amount u-full-width" val="50">$50</button>
+      </div>
+      <div class="two columns">
+        <button class="donation-amount u-full-width" val="75">$75</button>
+      </div>
+      <div class="two columns">
+        <button class="donation-amount u-full-width" val="100">$100</button>
+      </div>
+    </div>  
+    <div class="row">
+      <div class="offset-by-two eight columns">  
+        <input type="text" class="donation-box u-full-width" value="0">
+      </div>
+    </div>  
+    <div class="row">
+      <div class="offset-by-two eight columns">
+        <button class="sub-initial u-full-width">Donate</button>
+      </div>
+    </div>
+</div>
+
+<div class="container second_form_view" style="display:none">
   <%= form_for :user, url: users_path do |f| %>
   <div class="row">
     <div class="six columns">
@@ -66,7 +97,7 @@
       <div class="twelve columns">
         <p>
           <%= donation_form.label :amount %>
-          <%= donation_form.text_field :amount , :class =>"u-full-width", :placeholder=>"Amount"%>
+          <%= donation_form.text_field :amount , :class =>"final-amount u-full-width", :placeholder=>"Amount"%>
         </p>
       </div>
     </div>

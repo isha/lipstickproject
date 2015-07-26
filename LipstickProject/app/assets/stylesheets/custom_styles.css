@@ -1,8 +1,11 @@
-ul {
-	list-style-type: none;
+body {
+	margin: 50px;
 }
-
 .header {
 	padding: 40px;
 	text-align: center;
+}
+
+.first_form_view {
+	margin-bottom: 100px;
 }
