@@ -3386,3 +3386,5 @@ Started GET "/resque/style.css" for ::1 at 2015-07-26 09:44:24 -0700
 
 
 Started GET "/resque/ranger.js" for ::1 at 2015-07-26 09:44:24 -0700
+Processing by ApplicationController#verify as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
