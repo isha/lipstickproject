@@ -13,6 +13,7 @@ Rails.application.configure do
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
+  config.middleware.use PDFKit::Middleware
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
@@ -76,4 +77,17 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+    :authentication => :plain,
+    :address => "smtp.mailgun.org",
+    :port => 587,
+    :domain => "sandbox1614c4b472d24032b9930151551ba341.mailgun.org",
+    :user_name => "postmaster@sandbox1614c4b472d24032b9930151551ba341.mailgun.org",
+    :password => "709eac971811379a80fd81f189c38027"
+  }
 end
+
+
+
