@@ -3,3 +3,5 @@ Thumbs.db
 *~
 *.swp
 .sass-cache
+tmp/pids/*
+tmp/cache/assets/development/*
