@@ -16,7 +16,7 @@ class UsersController < ApplicationController
       Resque.enqueue(SendTaxReceiptEmailJob, @user.donations.last.id)
       Stripe.api_key = Rails.configuration.stripe[:secret_key]
       token = params[:stripeToken]
-      amount = @user.donations.last.amount * 100
+      amount = @user.donations.last.amount * 100.0
       # if payment is one-time
       begin
         charge = Stripe::Charge.create(
