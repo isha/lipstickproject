@@ -25,7 +25,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'resque'
 gem 'pdfkit'
-gem 'airbrake'
 gem 'rails_12factor'
 gem 'wkhtmltopdf-heroku'
 
@@ -38,7 +37,9 @@ gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+group :production do
+	gem 'airbrake'
+end 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
