@@ -12,18 +12,16 @@ class UsersController < ApplicationController
     @user = User.new(user_params.except(:addresses, :donations))
     @user.addresses << address
     @user.donations << donation
-    byebug
     if @user.save
       Resque.enqueue(SendTaxReceiptEmailJob, @user.donations.last.id)
-      byebug
+      Stripe.api_key = "sk_test_KZeR5mKmb2I9KCv6q5rXTPRs"
+      token = params[:stripeToken]
       if(!@user.recurring)
-        byebug
-        Stripe.api_key = "sk_test_47WSgDMSGAE8OrlTNbQQHAG4"
-        token = params[:stripeToken]
+        # pull this out into it's own function -- 
         # if payment is one-time
         begin
           charge = Stripe::Charge.create(
-            :amount => 1000, #reminder: amount in cents
+            :amount => 50000, #reminder: amount in cents
             :currency => 'cad', 
             :source => token, 
             :description => "Example charge"
@@ -31,6 +29,15 @@ class UsersController < ApplicationController
         rescue Stripe::CardError => e
           # the card has been declined
         end 
+      else
+        #set up recurring payment
+        # create a customer 
+        Stripe::Customer.create(
+          :description => "Monthly Donor", 
+          :source => token, 
+          :email => @user.email, 
+        k)
+        redirect_to@user
       end 
       redirect_to @user
     else

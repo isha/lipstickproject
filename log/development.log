@@ -3386,3 +3386,2276 @@ Started GET "/resque/style.css" for ::1 at 2015-07-26 09:44:24 -0700
 
 
 Started GET "/resque/ranger.js" for ::1 at 2015-07-26 09:44:24 -0700
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 09:56:33 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (221.3ms)
+Completed 200 OK in 746ms (Views: 679.0ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/assets/donations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 09:56:35 -0700
+
+
+Started GET "/assets/custom_styles.self-9ac8679b0f12dd4d06d16c4ac1de0c6bfb5800eb62fe44b77209dbcf66289efe.css?body=1" for ::1 at 2015-07-26 09:56:35 -0700
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-07-26 09:56:35 -0700
+
+
+Started GET "/assets/skeleton.self-88169ebc8add1ec072cb823d377f601b66e65edce2bca6058b56dc2681f81b12.css?body=1" for ::1 at 2015-07-26 09:56:35 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-26 09:56:35 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 09:56:35 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-26 09:56:35 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-26 09:56:35 -0700
+
+
+Started GET "/assets/donations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 09:56:35 -0700
+
+
+Started GET "/assets/form-helper.self-0ff90ab464a658048d59d1f06de25d2fb54081de55f63af52a0013878517a657.js?body=1" for ::1 at 2015-07-26 09:56:35 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 09:56:35 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-26 09:56:35 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-26 09:56:35 -0700
+
+
+Started POST "/users" for ::1 at 2015-07-26 09:58:35 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+XG9ytTgfhZlFFtG/Tv9bO4TRjBoIOwgyTVL5Kz8iHwT1EM2i/DfJNR9PMWdb1plejr+Rff5onGT5OCw6WRRZg==", "user"=>{"first_name"=>"magg", "last_name"=>"slk", "email"=>"magie@test.com", "addresses"=>{"street"=>"alsdkj", "house"=>"asldkj", "city"=>"van", "province"=>"bc", "postal_code"=>"postco"}, "donations"=>{"amount"=>"50"}, "recurring"=>"0", "accepts_marketing"=>"0"}}
+Completed 500 Internal Server Error in 199245ms (ActiveRecord: 0.0ms)
+
+SystemExit (exit):
+  app/controllers/users_controller.rb:16:in `create'
+
+
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (171.6ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (41.9ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.6ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (315.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (7.9ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (102.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (223.2ms)
+
+
+Started POST "/users" for ::1 at 2015-07-26 10:02:15 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+XG9ytTgfhZlFFtG/Tv9bO4TRjBoIOwgyTVL5Kz8iHwT1EM2i/DfJNR9PMWdb1plejr+Rff5onGT5OCw6WRRZg==", "user"=>{"first_name"=>"magg", "last_name"=>"slk", "email"=>"magie@test.com", "addresses"=>{"street"=>"alsdkj", "house"=>"asldkj", "city"=>"van", "province"=>"bc", "postal_code"=>"postco"}, "donations"=>{"amount"=>"50"}, "recurring"=>"0", "accepts_marketing"=>"0"}}
+Completed 500 Internal Server Error in 9176ms (ActiveRecord: 0.0ms)
+
+SystemExit (exit):
+  app/controllers/users_controller.rb:16:in `exit'
+  app/controllers/users_controller.rb:16:in `create'
+  app/controllers/users_controller.rb:16:in `create'
+
+
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (327.8ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (80.3ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (505.1ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.6ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.8ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (104.9ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (9.0ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (225.9ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:02:26 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (127.6ms)
+Completed 200 OK in 574ms (Views: 545.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:02:27 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (97.5ms)
+Completed 200 OK in 480ms (Views: 449.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-07-26 10:02:56 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a9vrlUbf+EssumtJPDeWuapYJA5c3+SRo2Ems2mvEgqBfhVpGc9ZeZ3TDMpcYzGwPnGce8MGqsD5sI3nLDfLEA==", "user"=>{"first_name"=>"Maggei", "last_name"=>"Mos", "email"=>"maggie@test.com", "addresses"=>{"street"=>"asldkj", "house"=>"asdljk", "city"=>"Vancouver", "province"=>"BC", "postal_code"=>"postco"}, "donations"=>{"amount"=>"75"}, "recurring"=>"0", "accepts_marketing"=>"0"}}
+Completed 500 Internal Server Error in 7599ms (ActiveRecord: 0.0ms)
+
+SystemExit (exit):
+  app/controllers/users_controller.rb:16:in `exit'
+  app/controllers/users_controller.rb:16:in `create'
+  app/controllers/users_controller.rb:16:in `create'
+
+
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (171.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (41.6ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (299.6ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (91.7ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.3ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (204.5ms)
+
+
+Started POST "/users" for ::1 at 2015-07-26 10:03:15 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a9vrlUbf+EssumtJPDeWuapYJA5c3+SRo2Ems2mvEgqBfhVpGc9ZeZ3TDMpcYzGwPnGce8MGqsD5sI3nLDfLEA==", "user"=>{"first_name"=>"Maggei", "last_name"=>"Mos", "email"=>"maggie@test.com", "addresses"=>{"street"=>"asldkj", "house"=>"asdljk", "city"=>"Vancouver", "province"=>"BC", "postal_code"=>"postco"}, "donations"=>{"amount"=>"75"}, "recurring"=>"0", "accepts_marketing"=>"0"}}
+Completed 500 Internal Server Error in 17603ms (ActiveRecord: 6.8ms)
+
+SystemExit (exit):
+  app/controllers/users_controller.rb:16:in `exit'
+  app/controllers/users_controller.rb:16:in `create'
+  app/controllers/users_controller.rb:16:in `create'
+
+
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (144.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (37.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (272.0ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.3ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.7ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (97.3ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (215.1ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:03:55 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (286.5ms)
+Completed 200 OK in 495ms (Views: 425.1ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:03:56 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (37.5ms)
+Completed 200 OK in 107ms (Views: 104.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-07-26 10:04:21 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+4TIIdbNKkcEp8grhLCDjbsByEvn0vpSI/Owo+KJjDsRITbdid2LdbXOr6jk5CSELyhwPngLtAN5Ihv3pxFVIQ==", "user"=>{"first_name"=>"Aalsd", "last_name"=>"aslkdj", "email"=>"magg@test.com", "addresses"=>{"street"=>"aslkdj", "house"=>"asldkj", "city"=>"Vancover", "province"=>"BC", "postal_code"=>"postco"}, "donations"=>{"amount"=>"50"}, "recurring"=>"0", "accepts_marketing"=>"0"}}
+  [1m[35m (1.4ms)[0m  BEGIN
+  [1m[36mSQL (11.0ms)[0m  [1mINSERT INTO `users` (`first_name`, `last_name`, `email`, `accepts_marketing`, `recurring`) VALUES ('Aalsd', 'aslkdj', 'magg@test.com', 0, 0)[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO `addresses` (`street`, `house`, `postal_code`, `city`, `province`, `user_id`, `created_at`, `updated_at`) VALUES ('aslkdj', 'asldkj', 'postco', 'Vancover', 'BC', 4, '2015-07-26 17:04:27', '2015-07-26 17:04:27')
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO `donations` (`amount`, `user_id`, `created_at`, `updated_at`) VALUES (50, 4, '2015-07-26 17:04:27', '2015-07-26 17:04:27')[0m
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Completed 500 Internal Server Error in 246464ms (ActiveRecord: 15.8ms)
+
+SystemExit (exit):
+  app/controllers/users_controller.rb:22:in `create'
+
+
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (180.7ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (38.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.9ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (312.8ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (101.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (2.1ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (232.8ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:08:46 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (239.7ms)
+Completed 200 OK in 1010ms (Views: 954.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:08:47 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (191.9ms)
+Completed 200 OK in 832ms (Views: 794.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-07-26 10:09:21 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IgiNE/VX7Baclp2DTQ9ee7sjypWHloRWyR60tGV42NvIrXPvqkdNJC3/+gAtW/lyLwpy4BhPygeTzx/gIOABwQ==", "user"=>{"first_name"=>"maggie", "last_name"=>"moss", "email"=>"magg@test.com", "addresses"=>{"street"=>"alksj", "house"=>"house", "city"=>"cit", "province"=>"bc", "postal_code"=>"postco"}, "donations"=>{"amount"=>"50"}, "recurring"=>"0", "accepts_marketing"=>"0"}}
+Completed 500 Internal Server Error in 45434ms (ActiveRecord: 0.0ms)
+
+SystemExit (exit):
+  app/controllers/users_controller.rb:16:in `exit'
+  app/controllers/users_controller.rb:16:in `create'
+  app/controllers/users_controller.rb:16:in `create'
+
+
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (205.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (46.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.0ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (349.0ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (10.3ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (104.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (223.4ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:10:08 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (108.9ms)
+Completed 200 OK in 747ms (Views: 719.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom_styles.self-9ac8679b0f12dd4d06d16c4ac1de0c6bfb5800eb62fe44b77209dbcf66289efe.css?body=1" for ::1 at 2015-07-26 10:10:09 -0700
+
+
+Started GET "/assets/donations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:10:09 -0700
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-07-26 10:10:09 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:10:09 -0700
+
+
+Started GET "/assets/skeleton.self-88169ebc8add1ec072cb823d377f601b66e65edce2bca6058b56dc2681f81b12.css?body=1" for ::1 at 2015-07-26 10:10:09 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-26 10:10:10 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-26 10:10:10 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-26 10:10:10 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-26 10:10:10 -0700
+
+
+Started GET "/assets/donations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:10:10 -0700
+
+
+Started GET "/assets/form-helper.self-0ff90ab464a658048d59d1f06de25d2fb54081de55f63af52a0013878517a657.js?body=1" for ::1 at 2015-07-26 10:10:10 -0700
+
+
+Started GET "/assets/stripe_helper.self-d493fcff7cad6807f6aa2aff820da78bf6c351801de55a87fcccc8c4894dc420.js?body=1" for ::1 at 2015-07-26 10:10:10 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:10:10 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-26 10:10:10 -0700
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:14:37 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (115.9ms)
+Completed 200 OK in 541ms (Views: 502.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom_styles.self-9ac8679b0f12dd4d06d16c4ac1de0c6bfb5800eb62fe44b77209dbcf66289efe.css?body=1" for ::1 at 2015-07-26 10:14:38 -0700
+
+
+Started GET "/assets/donations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:14:38 -0700
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-07-26 10:14:38 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:14:38 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-26 10:14:38 -0700
+
+
+Started GET "/assets/skeleton.self-88169ebc8add1ec072cb823d377f601b66e65edce2bca6058b56dc2681f81b12.css?body=1" for ::1 at 2015-07-26 10:14:38 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-26 10:14:38 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-26 10:14:38 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-26 10:14:38 -0700
+
+
+Started GET "/assets/donations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:14:38 -0700
+
+
+Started GET "/assets/form-helper.self-0ff90ab464a658048d59d1f06de25d2fb54081de55f63af52a0013878517a657.js?body=1" for ::1 at 2015-07-26 10:14:38 -0700
+
+
+Started GET "/assets/stripe_helper.self-d493fcff7cad6807f6aa2aff820da78bf6c351801de55a87fcccc8c4894dc420.js?body=1" for ::1 at 2015-07-26 10:14:39 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:14:39 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-26 10:14:39 -0700
+
+
+Started GET "/charges/new" for ::1 at 2015-07-26 10:16:08 -0700
+
+ActionController::RoutingError (uninitialized constant ChargesController):
+  activesupport (4.2.3) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.3) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.3) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.3) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.3) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:72:in `controller_reference'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:62:in `controller'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:41:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  pdfkit (0.8.0) lib/pdfkit/middleware.rb:16:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (57.7ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (57.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (20.9ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (809.3ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.1ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.8ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.8ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (120.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (2.3ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.0ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (252.2ms)
+
+
+Started GET "/charges/new" for ::1 at 2015-07-26 10:16:11 -0700
+
+ActionController::RoutingError (uninitialized constant ChargesController):
+  activesupport (4.2.3) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.3) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.3) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.3) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.3) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:72:in `controller_reference'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:62:in `controller'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:41:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  pdfkit (0.8.0) lib/pdfkit/middleware.rb:16:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (45.1ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (54.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.9ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (12.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (718.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.7ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.1ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (118.6ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.7ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.9ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (247.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'LipstickProject_development'
+  AND fk.table_name = 'addresses'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `addresses`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'LipstickProject_development'
+  AND fk.table_name = 'donations'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `donations`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'LipstickProject_development'
+  AND fk.table_name = 'users'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users`
+
+
+Started GET "/charges/new" for ::1 at 2015-07-26 10:18:26 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ChargesController#new as HTML
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template charges/new, application/new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/maggiemoss/lipstick_project/app/views"
+):
+  actionview (4.2.3) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.3) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  pdfkit (0.8.0) lib/pdfkit/middleware.rb:16:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (95.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (76.6ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (177.1ms)
+
+
+Started GET "/charges/new" for ::1 at 2015-07-26 10:19:49 -0700
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 323ms (Views: 322.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom_styles.self-9ac8679b0f12dd4d06d16c4ac1de0c6bfb5800eb62fe44b77209dbcf66289efe.css?body=1" for ::1 at 2015-07-26 10:19:50 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:19:50 -0700
+
+
+Started GET "/assets/donations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:19:50 -0700
+
+
+Started GET "/assets/skeleton.self-88169ebc8add1ec072cb823d377f601b66e65edce2bca6058b56dc2681f81b12.css?body=1" for ::1 at 2015-07-26 10:19:50 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-26 10:19:50 -0700
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-07-26 10:19:50 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-26 10:19:50 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-26 10:19:50 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-26 10:19:50 -0700
+
+
+Started GET "/assets/donations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:19:50 -0700
+
+
+Started GET "/assets/form-helper.self-0ff90ab464a658048d59d1f06de25d2fb54081de55f63af52a0013878517a657.js?body=1" for ::1 at 2015-07-26 10:19:50 -0700
+
+
+Started GET "/assets/stripe_helper.self-d493fcff7cad6807f6aa2aff820da78bf6c351801de55a87fcccc8c4894dc420.js?body=1" for ::1 at 2015-07-26 10:19:50 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:19:50 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-26 10:19:50 -0700
+
+
+Started POST "/charges" for ::1 at 2015-07-26 10:19:58 -0700
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6p4t7xBRYWwFiR/1GF/VKwKb8Mus2G9iyLOcnw2KPwwAO9MTT0HAXrTgeHZ4C3IilrJIvjMBITOSYjfLSBLmFg==", "stripeToken"=>"tok_16Ssn2HQ4N6tFLD26lK2Cpcw"}
+  Rendered charges/create.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 553ms (Views: 93.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-26 10:21:12 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users`
+  [1m[36mDonation Load (0.5ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 1  ORDER BY `donations`.`id` ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 1  ORDER BY `donations`.`id` ASC LIMIT 1  [["user_id", 1]]
+  [1m[36mDonation Load (0.5ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 2  ORDER BY `donations`.`id` ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 2  ORDER BY `donations`.`id` ASC LIMIT 1  [["user_id", 2]]
+  [1m[36mDonation Load (0.4ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 3  ORDER BY `donations`.`id` ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 3  ORDER BY `donations`.`id` ASC LIMIT 1  [["user_id", 3]]
+  [1m[36mDonation Load (0.4ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 4  ORDER BY `donations`.`id` ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 4  ORDER BY `donations`.`id` ASC LIMIT 1  [["user_id", 4]]
+  Rendered users/index.html.erb within layouts/application (49.1ms)
+Completed 200 OK in 117ms (Views: 92.1ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:21:14 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (46.7ms)
+Completed 200 OK in 116ms (Views: 97.8ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:21:15 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (34.8ms)
+Completed 200 OK in 248ms (Views: 244.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:22:41 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 92ms (Views: 89.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom_styles.self-9ac8679b0f12dd4d06d16c4ac1de0c6bfb5800eb62fe44b77209dbcf66289efe.css?body=1" for ::1 at 2015-07-26 10:22:42 -0700
+
+
+Started GET "/assets/donations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:22:42 -0700
+
+
+Started GET "/assets/skeleton.self-88169ebc8add1ec072cb823d377f601b66e65edce2bca6058b56dc2681f81b12.css?body=1" for ::1 at 2015-07-26 10:22:42 -0700
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-07-26 10:22:42 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-26 10:22:42 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:22:42 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-26 10:22:42 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-26 10:22:42 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-26 10:22:42 -0700
+
+
+Started GET "/assets/donations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:22:42 -0700
+
+
+Started GET "/assets/form-helper.self-0ff90ab464a658048d59d1f06de25d2fb54081de55f63af52a0013878517a657.js?body=1" for ::1 at 2015-07-26 10:22:42 -0700
+
+
+Started GET "/assets/stripe_helper.self-d493fcff7cad6807f6aa2aff820da78bf6c351801de55a87fcccc8c4894dc420.js?body=1" for ::1 at 2015-07-26 10:22:42 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:22:42 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-26 10:22:42 -0700
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:23:27 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (235.0ms)
+Completed 200 OK in 405ms (Views: 336.4ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/assets/custom_styles.self-9ac8679b0f12dd4d06d16c4ac1de0c6bfb5800eb62fe44b77209dbcf66289efe.css?body=1" for ::1 at 2015-07-26 10:23:28 -0700
+
+
+Started GET "/assets/donations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:23:28 -0700
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-07-26 10:23:28 -0700
+
+
+Started GET "/assets/skeleton.self-88169ebc8add1ec072cb823d377f601b66e65edce2bca6058b56dc2681f81b12.css?body=1" for ::1 at 2015-07-26 10:23:28 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-26 10:23:28 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-26 10:23:28 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:23:28 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-26 10:23:28 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-26 10:23:28 -0700
+
+
+Started GET "/assets/donations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:23:29 -0700
+
+
+Started GET "/assets/form-helper.self-0ff90ab464a658048d59d1f06de25d2fb54081de55f63af52a0013878517a657.js?body=1" for ::1 at 2015-07-26 10:23:29 -0700
+
+
+Started GET "/assets/stripe_helper.self-d493fcff7cad6807f6aa2aff820da78bf6c351801de55a87fcccc8c4894dc420.js?body=1" for ::1 at 2015-07-26 10:23:29 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:23:29 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-26 10:23:29 -0700
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:24:13 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (47.6ms)
+Completed 200 OK in 251ms (Views: 247.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/donations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:24:13 -0700
+
+
+Started GET "/assets/custom_styles.self-9ac8679b0f12dd4d06d16c4ac1de0c6bfb5800eb62fe44b77209dbcf66289efe.css?body=1" for ::1 at 2015-07-26 10:24:13 -0700
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-07-26 10:24:13 -0700
+
+
+Started GET "/assets/skeleton.self-88169ebc8add1ec072cb823d377f601b66e65edce2bca6058b56dc2681f81b12.css?body=1" for ::1 at 2015-07-26 10:24:13 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-26 10:24:13 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:24:13 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-26 10:24:13 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-26 10:24:13 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-26 10:24:13 -0700
+
+
+Started GET "/assets/donations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:24:13 -0700
+
+
+Started GET "/assets/form-helper.self-0ff90ab464a658048d59d1f06de25d2fb54081de55f63af52a0013878517a657.js?body=1" for ::1 at 2015-07-26 10:24:13 -0700
+
+
+Started GET "/assets/stripe_helper.self-623a2607f855fc81bca972e3b75aea76811f8bbc61de0e09eed47055e789b2b7.js?body=1" for ::1 at 2015-07-26 10:24:13 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:24:13 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-26 10:24:13 -0700
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:24:14 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 117ms (Views: 113.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom_styles.self-9ac8679b0f12dd4d06d16c4ac1de0c6bfb5800eb62fe44b77209dbcf66289efe.css?body=1" for ::1 at 2015-07-26 10:24:15 -0700
+
+
+Started GET "/assets/donations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:24:15 -0700
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-07-26 10:24:15 -0700
+
+
+Started GET "/assets/skeleton.self-88169ebc8add1ec072cb823d377f601b66e65edce2bca6058b56dc2681f81b12.css?body=1" for ::1 at 2015-07-26 10:24:15 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-26 10:24:15 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-26 10:24:15 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:24:15 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-26 10:24:15 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-26 10:24:15 -0700
+
+
+Started GET "/assets/donations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:24:15 -0700
+
+
+Started GET "/assets/form-helper.self-0ff90ab464a658048d59d1f06de25d2fb54081de55f63af52a0013878517a657.js?body=1" for ::1 at 2015-07-26 10:24:15 -0700
+
+
+Started GET "/assets/stripe_helper.self-623a2607f855fc81bca972e3b75aea76811f8bbc61de0e09eed47055e789b2b7.js?body=1" for ::1 at 2015-07-26 10:24:15 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:24:15 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-26 10:24:15 -0700
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:26:58 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 198ms (Views: 194.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/donations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:26:59 -0700
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-07-26 10:26:59 -0700
+
+
+Started GET "/assets/skeleton.self-88169ebc8add1ec072cb823d377f601b66e65edce2bca6058b56dc2681f81b12.css?body=1" for ::1 at 2015-07-26 10:26:59 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:26:59 -0700
+
+
+Started GET "/assets/custom_styles.self-9ac8679b0f12dd4d06d16c4ac1de0c6bfb5800eb62fe44b77209dbcf66289efe.css?body=1" for ::1 at 2015-07-26 10:26:59 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-26 10:26:59 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-26 10:26:59 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-26 10:26:59 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-26 10:26:59 -0700
+
+
+Started GET "/assets/donations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:26:59 -0700
+
+
+Started GET "/assets/stripe_helper.self-c132b5554a0ec3859ded24721464283c1ae703878a206c3de61728178b2e8845.js?body=1" for ::1 at 2015-07-26 10:26:59 -0700
+
+
+Started GET "/assets/form-helper.self-0ff90ab464a658048d59d1f06de25d2fb54081de55f63af52a0013878517a657.js?body=1" for ::1 at 2015-07-26 10:26:59 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-26 10:26:59 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:26:59 -0700
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:29:52 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 81ms (Views: 78.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom_styles.self-9ac8679b0f12dd4d06d16c4ac1de0c6bfb5800eb62fe44b77209dbcf66289efe.css?body=1" for ::1 at 2015-07-26 10:29:53 -0700
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-07-26 10:29:53 -0700
+
+
+Started GET "/assets/donations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:29:53 -0700
+
+
+Started GET "/assets/skeleton.self-88169ebc8add1ec072cb823d377f601b66e65edce2bca6058b56dc2681f81b12.css?body=1" for ::1 at 2015-07-26 10:29:53 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-26 10:29:53 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-26 10:29:53 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:29:53 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-26 10:29:53 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-26 10:29:53 -0700
+
+
+Started GET "/assets/donations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:29:53 -0700
+
+
+Started GET "/assets/form-helper.self-0ff90ab464a658048d59d1f06de25d2fb54081de55f63af52a0013878517a657.js?body=1" for ::1 at 2015-07-26 10:29:53 -0700
+
+
+Started GET "/assets/stripe_helper.self-c132b5554a0ec3859ded24721464283c1ae703878a206c3de61728178b2e8845.js?body=1" for ::1 at 2015-07-26 10:29:53 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:29:53 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-26 10:29:53 -0700
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:30:08 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 75ms (Views: 73.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:30:55 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 78ms (Views: 75.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/donations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:30:56 -0700
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-07-26 10:30:56 -0700
+
+
+Started GET "/assets/custom_styles.self-9ac8679b0f12dd4d06d16c4ac1de0c6bfb5800eb62fe44b77209dbcf66289efe.css?body=1" for ::1 at 2015-07-26 10:30:56 -0700
+
+
+Started GET "/assets/skeleton.self-88169ebc8add1ec072cb823d377f601b66e65edce2bca6058b56dc2681f81b12.css?body=1" for ::1 at 2015-07-26 10:30:56 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:30:56 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-26 10:30:56 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-26 10:30:56 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-26 10:30:56 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-26 10:30:56 -0700
+
+
+Started GET "/assets/donations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:30:56 -0700
+
+
+Started GET "/assets/form-helper.self-0ff90ab464a658048d59d1f06de25d2fb54081de55f63af52a0013878517a657.js?body=1" for ::1 at 2015-07-26 10:30:56 -0700
+
+
+Started GET "/assets/stripe_helper.self-c132b5554a0ec3859ded24721464283c1ae703878a206c3de61728178b2e8845.js?body=1" for ::1 at 2015-07-26 10:30:56 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:30:56 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-26 10:30:56 -0700
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:31:07 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 70ms (Views: 67.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom_styles.self-9ac8679b0f12dd4d06d16c4ac1de0c6bfb5800eb62fe44b77209dbcf66289efe.css?body=1" for ::1 at 2015-07-26 10:31:07 -0700
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-07-26 10:31:07 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-26 10:31:07 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:31:07 -0700
+
+
+Started GET "/assets/skeleton.self-88169ebc8add1ec072cb823d377f601b66e65edce2bca6058b56dc2681f81b12.css?body=1" for ::1 at 2015-07-26 10:31:07 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-26 10:31:07 -0700
+
+
+Started GET "/assets/donations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:31:07 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-26 10:31:07 -0700
+
+
+Started GET "/assets/donations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:31:07 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-26 10:31:07 -0700
+
+
+Started GET "/assets/form-helper.self-0ff90ab464a658048d59d1f06de25d2fb54081de55f63af52a0013878517a657.js?body=1" for ::1 at 2015-07-26 10:31:07 -0700
+
+
+Started GET "/assets/stripe_helper.self-c132b5554a0ec3859ded24721464283c1ae703878a206c3de61728178b2e8845.js?body=1" for ::1 at 2015-07-26 10:31:07 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:31:07 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-26 10:31:07 -0700
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:31:12 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 81ms (Views: 78.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom_styles.self-9ac8679b0f12dd4d06d16c4ac1de0c6bfb5800eb62fe44b77209dbcf66289efe.css?body=1" for ::1 at 2015-07-26 10:31:12 -0700
+
+
+Started GET "/assets/donations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:31:12 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-26 10:31:12 -0700
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-07-26 10:31:13 -0700
+
+
+Started GET "/assets/skeleton.self-88169ebc8add1ec072cb823d377f601b66e65edce2bca6058b56dc2681f81b12.css?body=1" for ::1 at 2015-07-26 10:31:13 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:31:13 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-26 10:31:13 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-26 10:31:13 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-26 10:31:13 -0700
+
+
+Started GET "/assets/donations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:31:13 -0700
+
+
+Started GET "/assets/form-helper.self-0ff90ab464a658048d59d1f06de25d2fb54081de55f63af52a0013878517a657.js?body=1" for ::1 at 2015-07-26 10:31:13 -0700
+
+
+Started GET "/assets/stripe_helper.self-c132b5554a0ec3859ded24721464283c1ae703878a206c3de61728178b2e8845.js?body=1" for ::1 at 2015-07-26 10:31:13 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:31:13 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-26 10:31:13 -0700
+
+
+Started POST "/charges" for ::1 at 2015-07-26 10:31:26 -0700
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1Ga9FGJn4oZvjjV/O8kzkyPj5h2sS59NdHqO+/I4NL0+w0PoPXdDtN7nUvxbnZSat8peaDOS0RwuqyWvt6Dtpw=="}
+Completed 500 Internal Server Error in 657ms (ActiveRecord: 0.0ms)
+
+Stripe::InvalidRequestError (Must provide source or customer.):
+  app/controllers/charges_controller.rb:12:in `create'
+
+
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (87.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (75.3ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (174.5ms)
+
+
+Started POST "/charges" for ::1 at 2015-07-26 10:32:04 -0700
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1Ga9FGJn4oZvjjV/O8kzkyPj5h2sS59NdHqO+/I4NL0+w0PoPXdDtN7nUvxbnZSat8peaDOS0RwuqyWvt6Dtpw=="}
+Completed 500 Internal Server Error in 318ms (ActiveRecord: 0.0ms)
+
+Stripe::InvalidRequestError (Must provide source or customer.):
+  app/controllers/charges_controller.rb:12:in `create'
+
+
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (86.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (70.1ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (163.8ms)
+
+
+Started GET "/charges/new" for ::1 at 2015-07-26 10:32:07 -0700
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 56ms (Views: 55.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charges/new" for ::1 at 2015-07-26 10:32:08 -0700
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 166ms (Views: 165.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/charges" for ::1 at 2015-07-26 10:32:15 -0700
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XuYfVIeko99l/AZyeKRR1ZSF+dwPfeqQ9JbeEikdf+20Q+Go2LQC7dSVYfEY8PbcAKxBqZCkpMGuR3VGbIWm9w=="}
+Completed 500 Internal Server Error in 176ms (ActiveRecord: 0.0ms)
+
+Stripe::InvalidRequestError (Must provide source or customer.):
+  app/controllers/charges_controller.rb:12:in `create'
+
+
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (84.0ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (70.7ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (163.5ms)
+
+
+Started POST "/charges" for ::1 at 2015-07-26 10:32:33 -0700
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XuYfVIeko99l/AZyeKRR1ZSF+dwPfeqQ9JbeEikdf+20Q+Go2LQC7dSVYfEY8PbcAKxBqZCkpMGuR3VGbIWm9w=="}
+Completed 500 Internal Server Error in 630ms (ActiveRecord: 0.0ms)
+
+Stripe::InvalidRequestError (Must provide source or customer.):
+  app/controllers/charges_controller.rb:12:in `create'
+
+
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (86.0ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (80.1ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (173.4ms)
+
+
+Started GET "/charges/new" for ::1 at 2015-07-26 10:32:35 -0700
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 69ms (Views: 68.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charges/new" for ::1 at 2015-07-26 10:32:35 -0700
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 95ms (Views: 94.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/charges" for ::1 at 2015-07-26 10:32:43 -0700
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MtV33DhxWYCQ4H3sitec/t200mM1szaCcjNHV0pI8rrYcIkgZ2H4siGJGm/qgzv3SZ1qFqpqeNMo4uwDD9AroA==", "stripeToken"=>"tok_16SszNHQ4N6tFLD2RJAjM4Gv"}
+  Rendered charges/create.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 424ms (Views: 53.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:32:52 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 72ms (Views: 69.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:32:53 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (114.7ms)
+Completed 200 OK in 200ms (Views: 196.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:34:18 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 154ms (Views: 151.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom_styles.self-9ac8679b0f12dd4d06d16c4ac1de0c6bfb5800eb62fe44b77209dbcf66289efe.css?body=1" for ::1 at 2015-07-26 10:34:19 -0700
+
+
+Started GET "/assets/donations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:34:19 -0700
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-07-26 10:34:19 -0700
+
+
+Started GET "/assets/skeleton.self-88169ebc8add1ec072cb823d377f601b66e65edce2bca6058b56dc2681f81b12.css?body=1" for ::1 at 2015-07-26 10:34:19 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-26 10:34:19 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-26 10:34:19 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-26 10:34:19 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-26 10:34:19 -0700
+
+
+Started GET "/assets/donations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:34:19 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:34:19 -0700
+
+
+Started GET "/assets/form-helper.self-0ff90ab464a658048d59d1f06de25d2fb54081de55f63af52a0013878517a657.js?body=1" for ::1 at 2015-07-26 10:34:19 -0700
+
+
+Started GET "/assets/stripe_helper.self-590f1f2be3a2d6d7c2bd574b820e9bf5082929a68dadb8dfb25332b5ac33f973.js?body=1" for ::1 at 2015-07-26 10:34:19 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:34:19 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-26 10:34:19 -0700
+
+
+Started GET "/charges/new" for ::1 at 2015-07-26 10:34:24 -0700
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 61ms (Views: 60.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charges/new" for ::1 at 2015-07-26 10:34:24 -0700
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 154ms (Views: 153.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/charges" for ::1 at 2015-07-26 10:34:47 -0700
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m1vZTr42b0kbGKWbDaNhHJTM3B4qrATsTjTB2o11XkVx/iey4SbOe6pxwhht98YVAOVka7V1Sr0U5WqOyO2HXw==", "stripeToken"=>"tok_16St1NHQ4N6tFLD2PzD0D3d4"}
+  Rendered charges/create.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 896ms (Views: 58.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:34:53 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 75ms (Views: 72.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-26 10:34:54 -0700
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:34:54 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 173ms (Views: 169.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:35:31 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 91ms (Views: 88.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/donations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:35:31 -0700
+
+
+Started GET "/assets/custom_styles.self-9ac8679b0f12dd4d06d16c4ac1de0c6bfb5800eb62fe44b77209dbcf66289efe.css?body=1" for ::1 at 2015-07-26 10:35:31 -0700
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-07-26 10:35:31 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-26 10:35:31 -0700
+
+
+Started GET "/assets/skeleton.self-88169ebc8add1ec072cb823d377f601b66e65edce2bca6058b56dc2681f81b12.css?body=1" for ::1 at 2015-07-26 10:35:31 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:35:31 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-26 10:35:31 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-26 10:35:31 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-26 10:35:31 -0700
+
+
+Started GET "/assets/donations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:35:31 -0700
+
+
+Started GET "/assets/form-helper.self-0ff90ab464a658048d59d1f06de25d2fb54081de55f63af52a0013878517a657.js?body=1" for ::1 at 2015-07-26 10:35:31 -0700
+
+
+Started GET "/assets/stripe_helper.self-590f1f2be3a2d6d7c2bd574b820e9bf5082929a68dadb8dfb25332b5ac33f973.js?body=1" for ::1 at 2015-07-26 10:35:31 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:35:31 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-26 10:35:31 -0700
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:38:32 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (34.6ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `create_charges_path' for #<#<Class:0x007f923ebd9b10>:0x007f923d565230>):
+    129: 
+    130:   <% end %>  
+    131:   </div>
+    132:   <%= form_for :charge, url: create_charges_path, html: { id: "payment-form"} do |f| %>
+    133:     <span class="payment-errors"></span>
+    134:       <div class="row">
+    135:         <label>
+  app/views/users/new.html.erb:132:in `_app_views_users_new_html_erb__2405641112449510269_70133035499320'
+
+
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (100.6ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (85.0ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (198.1ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:38:34 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (27.7ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `create_charges_path' for #<#<Class:0x007f923ebd9b10>:0x007f9241ae29e8>):
+    129: 
+    130:   <% end %>  
+    131:   </div>
+    132:   <%= form_for :charge, url: create_charges_path, html: { id: "payment-form"} do |f| %>
+    133:     <span class="payment-errors"></span>
+    134:       <div class="row">
+    135:         <label>
+  app/views/users/new.html.erb:132:in `_app_views_users_new_html_erb__2405641112449510269_70133035499320'
+
+
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (91.8ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (83.3ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (186.2ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:38:43 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 88ms (Views: 85.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom_styles.self-9ac8679b0f12dd4d06d16c4ac1de0c6bfb5800eb62fe44b77209dbcf66289efe.css?body=1" for ::1 at 2015-07-26 10:38:43 -0700
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-07-26 10:38:43 -0700
+
+
+Started GET "/assets/donations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:38:43 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-26 10:38:43 -0700
+
+
+Started GET "/assets/skeleton.self-88169ebc8add1ec072cb823d377f601b66e65edce2bca6058b56dc2681f81b12.css?body=1" for ::1 at 2015-07-26 10:38:43 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:38:43 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-26 10:38:43 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-26 10:38:43 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-26 10:38:43 -0700
+
+
+Started GET "/assets/donations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:38:43 -0700
+
+
+Started GET "/assets/form-helper.self-0ff90ab464a658048d59d1f06de25d2fb54081de55f63af52a0013878517a657.js?body=1" for ::1 at 2015-07-26 10:38:43 -0700
+
+
+Started GET "/assets/stripe_helper.self-590f1f2be3a2d6d7c2bd574b820e9bf5082929a68dadb8dfb25332b5ac33f973.js?body=1" for ::1 at 2015-07-26 10:38:43 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:38:43 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-26 10:38:43 -0700
+
+
+Started GET "/" for ::1 at 2015-07-26 10:38:53 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users`
+  [1m[36mDonation Load (0.6ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 1  ORDER BY `donations`.`id` ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 1  ORDER BY `donations`.`id` ASC LIMIT 1  [["user_id", 1]]
+  [1m[36mDonation Load (0.5ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 2  ORDER BY `donations`.`id` ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 2  ORDER BY `donations`.`id` ASC LIMIT 1  [["user_id", 2]]
+  [1m[36mDonation Load (0.4ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 3  ORDER BY `donations`.`id` ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 3  ORDER BY `donations`.`id` ASC LIMIT 1  [["user_id", 3]]
+  [1m[36mDonation Load (0.5ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 4  ORDER BY `donations`.`id` ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 4  ORDER BY `donations`.`id` ASC LIMIT 1  [["user_id", 4]]
+  Rendered users/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 83ms (Views: 78.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/charges/new" for ::1 at 2015-07-26 10:38:57 -0700
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 63ms (Views: 61.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/charges" for ::1 at 2015-07-26 10:39:28 -0700
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tz8NZPpbOy8agwy+LhDY7gM5/Di5Jz5UlkQoyG/37nJdmvOYpUuaHavqaz1ORH/nlxBETSb+cAXMlYOcKm83aA==", "stripeToken"=>"tok_16St5uHQ4N6tFLD2vWTjF2ka"}
+  Rendered charges/create.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 891ms (Views: 72.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/charges" for ::1 at 2015-07-26 10:39:41 -0700
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tz8NZPpbOy8agwy+LhDY7gM5/Di5Jz5UlkQoyG/37nJdmvOYpUuaHavqaz1ORH/nlxBETSb+cAXMlYOcKm83aA==", "stripeToken"=>"tok_16St66HQ4N6tFLD24I0NMGDs"}
+  Rendered charges/create.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 364ms (Views: 51.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:51:50 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 89ms (Views: 85.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/donations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:51:50 -0700
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-07-26 10:51:50 -0700
+
+
+Started GET "/assets/skeleton.self-88169ebc8add1ec072cb823d377f601b66e65edce2bca6058b56dc2681f81b12.css?body=1" for ::1 at 2015-07-26 10:51:50 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-26 10:51:50 -0700
+
+
+Started GET "/assets/custom_styles.self-9ac8679b0f12dd4d06d16c4ac1de0c6bfb5800eb62fe44b77209dbcf66289efe.css?body=1" for ::1 at 2015-07-26 10:51:50 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-26 10:51:50 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:51:50 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-26 10:51:50 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-26 10:51:50 -0700
+
+
+Started GET "/assets/donations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:51:50 -0700
+
+
+Started GET "/assets/form-helper.self-0ff90ab464a658048d59d1f06de25d2fb54081de55f63af52a0013878517a657.js?body=1" for ::1 at 2015-07-26 10:51:50 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:51:50 -0700
+
+
+Started GET "/assets/stripe_helper.self-590f1f2be3a2d6d7c2bd574b820e9bf5082929a68dadb8dfb25332b5ac33f973.js?body=1" for ::1 at 2015-07-26 10:51:50 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-26 10:51:50 -0700
+
+
+Started POST "/charges" for ::1 at 2015-07-26 10:52:04 -0700
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DYQAH298/wM3apehUpJZHkdBBLJMrMy3xz2JH4dCVTnnIf7jMGxeMYYD8CIyxv4X02i8x9N1guad7CJLwtqMIw==", "stripeToken"=>"tok_16StI6HQ4N6tFLD2Rvvual90"}
+  Rendered charges/create.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 597ms (Views: 66.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/charges" for ::1 at 2015-07-26 10:54:05 -0700
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DYQAH298/wM3apehUpJZHkdBBLJMrMy3xz2JH4dCVTnnIf7jMGxeMYYD8CIyxv4X02i8x9N1guad7CJLwtqMIw==", "stripeToken"=>"tok_16StI6HQ4N6tFLD2Rvvual90"}
+Completed 500 Internal Server Error in 582ms (ActiveRecord: 0.0ms)
+
+Stripe::InvalidRequestError (You cannot use a Stripe token more than once: tok_16StI6HQ4N6tFLD2Rvvual90.):
+  app/controllers/charges_controller.rb:12:in `create'
+
+
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (92.9ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (74.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (163.1ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:54:13 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 167ms (Views: 164.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/stripe_helper.self-bcacd47303ed056ab164e07425eddf9290b326e2e336539f10955561cb09549f.js?body=1" for ::1 at 2015-07-26 10:54:14 -0700
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:54:15 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 175ms (Views: 171.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:54:49 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 151ms (Views: 146.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom_styles.self-9ac8679b0f12dd4d06d16c4ac1de0c6bfb5800eb62fe44b77209dbcf66289efe.css?body=1" for ::1 at 2015-07-26 10:54:49 -0700
+
+
+Started GET "/assets/donations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:54:49 -0700
+
+
+Started GET "/assets/skeleton.self-88169ebc8add1ec072cb823d377f601b66e65edce2bca6058b56dc2681f81b12.css?body=1" for ::1 at 2015-07-26 10:54:49 -0700
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-07-26 10:54:49 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-26 10:54:49 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:54:49 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-26 10:54:49 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-26 10:54:49 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-26 10:54:49 -0700
+
+
+Started GET "/assets/donations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:54:49 -0700
+
+
+Started GET "/assets/form-helper.self-0ff90ab464a658048d59d1f06de25d2fb54081de55f63af52a0013878517a657.js?body=1" for ::1 at 2015-07-26 10:54:49 -0700
+
+
+Started GET "/assets/stripe_helper.self-b537acb820c2360aae857ff062ad7d7e443a912039ee7c658b110e106d82ad9b.js?body=1" for ::1 at 2015-07-26 10:54:49 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:54:49 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-26 10:54:49 -0700
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:57:45 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (30.5ms)
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 9.3ms)
+
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x007f923d48d6c8>:0x007f923d48cc00>):
+    128: 
+    129:   <% end %>  
+    130:   </div>
+    131:   <%= f.fields_for :donations do |donation_form| %>
+    132:     <span class="payment-errors"></span>
+    133:       <div class="row">
+    134:         <label>
+  app/views/users/new.html.erb:131:in `_app_views_users_new_html_erb__2405641112449510269_70133021318320'
+
+
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (85.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (72.6ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (157.2ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:57:47 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (38.2ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x007f923d48d6c8>:0x007f923c70dbb0>):
+    128: 
+    129:   <% end %>  
+    130:   </div>
+    131:   <%= f.fields_for :donations do |donation_form| %>
+    132:     <span class="payment-errors"></span>
+    133:       <div class="row">
+    134:         <label>
+  app/views/users/new.html.erb:131:in `_app_views_users_new_html_erb__2405641112449510269_70133021318320'
+
+
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (85.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (74.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (167.2ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:58:08 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (27.9ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x007f923d48d6c8>:0x007f923b96c380>):
+    128: 
+    129:   <% end %>  
+    130:   </div>
+    131:   <%= f.fields_for :charges do |charges| %>
+    132:     <span class="payment-errors"></span>
+    133:       <div class="row">
+    134:         <label>
+  app/views/users/new.html.erb:131:in `_app_views_users_new_html_erb__2405641112449510269_70133020830340'
+
+
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (88.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (73.3ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (161.6ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:59:08 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 72ms (Views: 69.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom_styles.self-9ac8679b0f12dd4d06d16c4ac1de0c6bfb5800eb62fe44b77209dbcf66289efe.css?body=1" for ::1 at 2015-07-26 10:59:08 -0700
+
+
+Started GET "/assets/skeleton.self-88169ebc8add1ec072cb823d377f601b66e65edce2bca6058b56dc2681f81b12.css?body=1" for ::1 at 2015-07-26 10:59:08 -0700
+
+
+Started GET "/assets/donations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:59:08 -0700
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-07-26 10:59:08 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-26 10:59:08 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 10:59:08 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-26 10:59:08 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-26 10:59:08 -0700
+
+
+Started GET "/assets/donations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:59:08 -0700
+
+
+Started GET "/assets/form-helper.self-0ff90ab464a658048d59d1f06de25d2fb54081de55f63af52a0013878517a657.js?body=1" for ::1 at 2015-07-26 10:59:08 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-26 10:59:08 -0700
+
+
+Started GET "/assets/stripe_helper.self-b537acb820c2360aae857ff062ad7d7e443a912039ee7c658b110e106d82ad9b.js?body=1" for ::1 at 2015-07-26 10:59:08 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-26 10:59:08 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-26 10:59:08 -0700
+
+
+Started POST "/charges" for ::1 at 2015-07-26 10:59:22 -0700
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SdTo/q3EMX5ySP8TVSboCI/jgVICfL0W9MPypJ4B/UGjcRYC8tSQTMMhmJA1ck8BG8o5J52l80euElnw25kkWw=="}
+Completed 500 Internal Server Error in 213ms (ActiveRecord: 0.0ms)
+
+Stripe::InvalidRequestError (Must provide source or customer.):
+  app/controllers/charges_controller.rb:12:in `create'
+
+
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (74.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (160.6ms)
+
+
+Started POST "/charges" for ::1 at 2015-07-26 10:59:43 -0700
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SdTo/q3EMX5ySP8TVSboCI/jgVICfL0W9MPypJ4B/UGjcRYC8tSQTMMhmJA1ck8BG8o5J52l80euElnw25kkWw=="}
+Completed 500 Internal Server Error in 176ms (ActiveRecord: 0.0ms)
+
+Stripe::InvalidRequestError (Must provide source or customer.):
+  app/controllers/charges_controller.rb:12:in `create'
+
+
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.1ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (94.3ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (72.9ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (166.0ms)
+
+
+Started POST "/charges" for ::1 at 2015-07-26 10:59:46 -0700
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SdTo/q3EMX5ySP8TVSboCI/jgVICfL0W9MPypJ4B/UGjcRYC8tSQTMMhmJA1ck8BG8o5J52l80euElnw25kkWw=="}
+Completed 500 Internal Server Error in 583ms (ActiveRecord: 0.0ms)
+
+Stripe::InvalidRequestError (Must provide source or customer.):
+  app/controllers/charges_controller.rb:12:in `create'
+
+
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (85.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (77.0ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (169.2ms)
+
+
+Started GET "/charges/new" for ::1 at 2015-07-26 10:59:49 -0700
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 131ms (Views: 130.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charges/new" for ::1 at 2015-07-26 10:59:49 -0700
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 162ms (Views: 161.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/stripe_helper.self-318d963fc7a2dd7d780678bdf66e5856198a3138b8662f2adf64da7e06211cbe.js?body=1" for ::1 at 2015-07-26 10:59:49 -0700
+
+
+Started GET "/usrs/new" for ::1 at 2015-07-26 10:59:55 -0700
+
+ActionController::RoutingError (No route matches [GET] "/usrs/new"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.3ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (123.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (72.9ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (159.1ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:59:58 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 137ms (Views: 133.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 10:59:58 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (35.2ms)
+Completed 200 OK in 150ms (Views: 147.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/charges" for ::1 at 2015-07-26 11:00:05 -0700
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C+1yb+xzC1w80NWpSr5yDhGDKTpkp8V1o188YKWBmQnhSIyTs2Oqbo25sioq6tUHhaqRT/t+iyT5jpc04BlAEw=="}
+Completed 500 Internal Server Error in 265ms (ActiveRecord: 0.0ms)
+
+Stripe::InvalidRequestError (Must provide source or customer.):
+  app/controllers/charges_controller.rb:12:in `create'
+
+
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (88.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (83.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (178.6ms)
+
+
+Started POST "/charges" for ::1 at 2015-07-26 11:00:21 -0700
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C+1yb+xzC1w80NWpSr5yDhGDKTpkp8V1o188YKWBmQnhSIyTs2Oqbo25sioq6tUHhaqRT/t+iyT5jpc04BlAEw=="}
+Completed 500 Internal Server Error in 614ms (ActiveRecord: 0.0ms)
+
+Stripe::InvalidRequestError (Must provide source or customer.):
+  app/controllers/charges_controller.rb:12:in `create'
+
+
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (104.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (74.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (169.7ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 11:00:24 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 78ms (Views: 76.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 11:00:25 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 117ms (Views: 114.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/charges" for ::1 at 2015-07-26 11:00:32 -0700
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CpquMg4ZrmmEBZoY/m7Z6WMbMCgU1JIsCinIlPPHS1rgP1DOUQkPWzVs/ZueOn7g9zKIXYsN3H1Q+GPAtl+SQA=="}
+Completed 500 Internal Server Error in 632ms (ActiveRecord: 0.0ms)
+
+Stripe::InvalidRequestError (Must provide source or customer.):
+  app/controllers/charges_controller.rb:12:in `create'
+
+
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.1ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (96.1ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (74.1ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (160.8ms)
+
+
+Started POST "/charges" for ::1 at 2015-07-26 11:01:06 -0700
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CpquMg4ZrmmEBZoY/m7Z6WMbMCgU1JIsCinIlPPHS1rgP1DOUQkPWzVs/ZueOn7g9zKIXYsN3H1Q+GPAtl+SQA=="}
+Completed 500 Internal Server Error in 625ms (ActiveRecord: 0.0ms)
+
+Stripe::InvalidRequestError (Must provide source or customer.):
+  app/controllers/charges_controller.rb:12:in `create'
+
+
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (81.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (74.1ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (161.3ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 11:01:13 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 74ms (Views: 71.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 11:01:14 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 130ms (Views: 126.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/charges" for ::1 at 2015-07-26 11:01:25 -0700
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BAodIfTu9eyVMvo+tl24UWkRdLiTfbhZ99NX9gdQszLur+Pdq/5U3iRbnb3WCR9Y/TjMzQyk9gitAvyiQshqKA==", "stripeToken"=>"tok_16StR9HQ4N6tFLD2XFddjYv8"}
+  Rendered charges/create.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 827ms (Views: 52.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/charges" for ::1 at 2015-07-26 11:01:34 -0700
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BAodIfTu9eyVMvo+tl24UWkRdLiTfbhZ99NX9gdQszLur+Pdq/5U3iRbnb3WCR9Y/TjMzQyk9gitAvyiQshqKA==", "stripeToken"=>"tok_16StRIHQ4N6tFLD2aNnIGweZ"}
+  Rendered charges/create.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 510ms (Views: 54.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 11:04:10 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 93ms (Views: 90.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 11:04:11 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 126ms (Views: 123.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-07-26 11:04:57 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j1o/hgqAL9bsKEL/FimtlidrBlEJKAi2fqJrauCjhGZl/8F6VZCO5F1BJXx2fQqfs0K+JJbxRuckc8A+pTtdfA==", "user"=>{"first_name"=>"Maggie", "last_name"=>"Moss", "email"=>"maggie@test.com", "addresses"=>{"street"=>"street", "house"=>"house", "city"=>"vancouver", "province"=>"bc", "postal_code"=>"postco"}, "donations"=>{"amount"=>"20"}, "recurring"=>"0", "accepts_marketing"=>"0"}}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `users` (`first_name`, `last_name`, `email`, `accepts_marketing`, `recurring`) VALUES ('Maggie', 'Moss', 'maggie@test.com', 0, 0)
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `addresses` (`street`, `house`, `postal_code`, `city`, `province`, `user_id`, `created_at`, `updated_at`) VALUES ('street', 'house', 'postco', 'vancouver', 'bc', 5, '2015-07-26 18:04:57', '2015-07-26 18:04:57')[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `donations` (`amount`, `user_id`, `created_at`, `updated_at`) VALUES (20, 5, '2015-07-26 18:04:57', '2015-07-26 18:04:57')
+  [1m[36m (1.6ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 99760ms (ActiveRecord: 3.0ms)
+
+SystemExit (exit):
+  app/controllers/users_controller.rb:19:in `exit'
+  app/controllers/users_controller.rb:19:in `create'
+  app/controllers/users_controller.rb:19:in `create'
+
+
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 11:06:44 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (221.5ms)
+Completed 200 OK in 417ms (Views: 336.7ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 11:06:45 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (39.6ms)
+Completed 200 OK in 127ms (Views: 123.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-07-26 11:07:24 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rPSRB2IkpAAdXwvWuwtmZe+qjc/gMzntVRJAtvL6sT9GUW/7PTQFMqw2bFXbX8Fse4M1un/qd7wPw+vit2JoJQ==", "user"=>{"first_name"=>"magg", "last_name"=>"moss", "email"=>"magg@test.com", "addresses"=>{"street"=>"street", "house"=>"house", "city"=>"van", "province"=>"bc", "postal_code"=>"k0cps"}, "donations"=>{"amount"=>"50"}, "recurring"=>"0", "accepts_marketing"=>"0"}, "stripeToken"=>"tok_16StWvHQ4N6tFLD2oPK0hD36"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `users` (`first_name`, `last_name`, `email`, `accepts_marketing`, `recurring`) VALUES ('magg', 'moss', 'magg@test.com', 0, 0)[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO `addresses` (`street`, `house`, `postal_code`, `city`, `province`, `user_id`, `created_at`, `updated_at`) VALUES ('street', 'house', 'k0cps', 'van', 'bc', 6, '2015-07-26 18:07:24', '2015-07-26 18:07:24')
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `donations` (`amount`, `user_id`, `created_at`, `updated_at`) VALUES (50, 6, '2015-07-26 18:07:24', '2015-07-26 18:07:24')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+Completed 500 Internal Server Error in 14546ms (ActiveRecord: 2.3ms)
+
+SystemExit (exit):
+  app/controllers/users_controller.rb:19:in `exit'
+  app/controllers/users_controller.rb:19:in `create'
+  app/controllers/users_controller.rb:19:in `create'
+
+
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (161.0ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (41.7ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (306.8ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.5ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.0ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.0ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (108.0ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /Users/maggiemoss/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (231.5ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 11:08:21 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (147.6ms)
+Completed 200 OK in 911ms (Views: 666.0ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-26 11:08:23 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (122.2ms)
+Completed 200 OK in 596ms (Views: 563.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-07-26 11:08:51 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AXDLpKCDVg1kie8WrmgTJkIp7AA3koYkT+PF22fzBP3r1TVY/5P3P9XgiJXOPLQv1gBUdahLyHUVMm6PImvd5w==", "user"=>{"first_name"=>"maggie", "last_name"=>"moss", "email"=>"maggie@test.com", "addresses"=>{"street"=>"street", "house"=>"house", "city"=>"vancouver", "province"=>"bc", "postal_code"=>"postco"}, "donations"=>{"amount"=>"20"}, "recurring"=>"0", "accepts_marketing"=>"0"}, "stripeToken"=>"tok_16StYKHQ4N6tFLD288hL78ox"}
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `users` (`first_name`, `last_name`, `email`, `accepts_marketing`, `recurring`) VALUES ('maggie', 'moss', 'maggie@test.com', 0, 0)
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `addresses` (`street`, `house`, `postal_code`, `city`, `province`, `user_id`, `created_at`, `updated_at`) VALUES ('street', 'house', 'postco', 'vancouver', 'bc', 7, '2015-07-26 18:08:51', '2015-07-26 18:08:51')[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `donations` (`amount`, `user_id`, `created_at`, `updated_at`) VALUES (20, 7, '2015-07-26 18:08:51', '2015-07-26 18:08:51')
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 612ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/users/7" for ::1 at 2015-07-26 11:08:51 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mDonation Load (1.2ms)[0m  [1mSELECT  `donations`.* FROM `donations` WHERE `donations`.`user_id` = 7  ORDER BY `donations`.`id` ASC LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 426ms (Views: 405.1ms | ActiveRecord: 1.7ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateRecurringDonationTable (1437936110516)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateRecurringDonationTable (1437936110516)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddRecurringDonationTable (20150726185345)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddRecurringDonationTable (20150726185345)
+  [1m[35m (56.6ms)[0m  CREATE TABLE `recurring_donations` (`id` int(11) auto_increment PRIMARY KEY, `user_id` int(11), `amount` int(11), `stripe_id` varchar(255), `start_date` datetime,  INDEX `index_recurring_donations_on_user_id`  (`user_id`) ) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150726185345')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to AddTimestampsToDonations (20150726185739)
+  [1m[35m (52.7ms)[0m  ALTER TABLE `donations` ADD `tax_receipt_date` datetime
+  [1m[36m (52.3ms)[0m  [1mALTER TABLE `donations` ADD `donation_date` datetime[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20150726185739')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'LipstickProject_development'
+  AND fk.table_name = 'addresses'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `addresses`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'LipstickProject_development'
+  AND fk.table_name = 'donations'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `donations`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'LipstickProject_development'
+  AND fk.table_name = 'recurring_donations'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `recurring_donations`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'LipstickProject_development'
+  AND fk.table_name = 'users'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `users`[0m
