@@ -1,39 +1,24 @@
-<h2>Listing users</h2>
- 
-<table>
-  <tr>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Email Address</th>
-  </tr>
-
-  <ul class="collapsible" data-collapsible="accordion">
+<div class="container">
+  <table>
+    <tr>
+      <th> First Name </th>
+      <th> Last Name </th>
+      <th> Email </th>
+    </tr>
     <% @users.each do |user| %>
-      <li>
-        <div class="collapsible-header">
-          <tr>
-            <td><%= user.first_name %></td>
-            <td><%= user.last_name %></td>
-            <td><%= user.email %></td>
+      <tr class="collapsible-header">
+        <td><%= user.first_name %></td>
+        <td><%= user.last_name %></td>
+        <td><%= user.email %></td>
+      </tr>
+      <% user.donations.each do |donation| %>
+          <tr class="collapsible-body"> 
+            <td>Amount: <%= donation.amount %></td>
           </tr>
-        </div>
-        <div class="collapsible-body">
-          <table>
-            <tr>
-              <th>Amount</th>
-              <th>Tax Receipt Sent</th>
-            </tr>
-
-            <% user.donations.each do |donation| %>
-              <tr>
-                <td><%= user.donations.last.amount if user.donations.last %></td>
-                <td><%= user.donations.last.tax_receipt_sent ? "Yes" : "No" %></td>
-              </tr>
-            <% end %>
-          </table>
-        </div>
-      </li>
-    <% end %>
-  </ul>
-
-</table>
+          <tr class="collapsible-body">
+            <td> Tax Receipt: <%= donation.tax_receipt_sent %></td>
+          </tr>
+        <% end %>
+    <% end %>      
+  </table>
+</div>

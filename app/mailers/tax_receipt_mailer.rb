@@ -20,9 +20,6 @@ class TaxReceiptMailer < ApplicationMailer
     html = erb.result(binding)
     kit = PDFKit.new(html)
 
-    # For testing purposes
-    file = kit.to_file('/Users/ishak/Desktop/new_tax_receipt.pdf')
-
     kit.to_pdf
   end
 end

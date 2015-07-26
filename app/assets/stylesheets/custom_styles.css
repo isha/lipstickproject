@@ -30,3 +30,14 @@ body {
 	background-color: #ff0029;
 	color: white;
 }
+
+.collapsible-body {
+	display:none;
+}
+
+.collapsible-header {
+	cursor: pointer;
+}
+.show {
+	display: block;
+}

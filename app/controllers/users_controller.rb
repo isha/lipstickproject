@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     @user.donations << donation
     if @user.save
       Resque.enqueue(SendTaxReceiptEmailJob, @user.donations.last.id)
-      Stripe.api_key = "sk_test_KZeR5mKmb2I9KCv6q5rXTPRs"
+      Stripe.api_key = Rails.configuration.stripe[:secret_key]
       token = params[:stripeToken]
       amount = @user.donations.last.amount * 100
       # if payment is one-time
@@ -28,7 +28,7 @@ class UsersController < ApplicationController
       rescue Stripe::CardError => e
         # the card has been declined
       end 
-      redirect_to @user
+      redirect_to "http://www.thelipstickproject.ca/thank-you"
     else
       render :new
     end

@@ -146,5 +146,5 @@
 </div>
 <%= javascript_include_tag "https://js.stripe.com/v2/" %>
 <script>
-    Stripe.setPublishableKey('pk_test_LAZaDothMSMI4ioX012ibk2V');
+    Stripe.setPublishableKey("<%= Rails.configuration.stripe[:publishable_key] %>");
 </script>
