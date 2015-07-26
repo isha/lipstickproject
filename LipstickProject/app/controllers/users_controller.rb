@@ -12,10 +12,25 @@ class UsersController < ApplicationController
     @user = User.new(user_params.except(:addresses, :donations))
     @user.addresses << address
     @user.donations << donation
-    
+
     if @user.save
       Resque.enqueue(SendTaxReceiptEmailJob, @user.donations.last.id)
       redirect_to @user
+      if(!@user.recurring)
+        Stripe.api_key = "sk_test_47WSgDMSGAE8OrlTNbQQHAG4"
+        token = params[:stripeToken]
+        # if payment is one-time
+        begin
+          charge = Stripe::Charge.create(
+            :amount => 1000, #reminder: amount in cents
+            :currency => 'cad', 
+            :source => token, 
+            :description => "Example charge"
+          )
+        rescue Stripe::CardError => e
+          # the card has been declined
+        end 
+      end 
     else
       render :new
     end

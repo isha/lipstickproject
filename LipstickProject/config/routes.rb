@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   root 'users#index'
   resources :users 
   resources :donations
-
+  resources :charges
+  
   get '/thankyou', :to => redirect('/thankyou.html')
   mount Resque::Server.new, at: "/resque"
 
