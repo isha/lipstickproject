@@ -110,18 +110,22 @@ p{
      
     <div id="page_1">
 	<div id="dimg1">
-		<%= image_tag "thankYouEmail.jpg" %>
+		<%= image_tag attachments['thankYouEmail.jpg'].url %>
 	</div>	
 
 	<div id="id_1">
 		<p class="title"> Hi <%= @user.first_name %>,</p>
-		<p class="subTitle"></p>
-		<p class="ft1">You did it! Thank you for being a part of our incredible family of supporters. Your gift of XXX will make people  the best version of themselves on days when they need their inner strength the most. With your help our volunteers will bring joy and comfort with manis, massages and gentle beard trims. We are deeply grateful for your compassion. </p>
+
+		<p class="ft1">
+		You did it! Thank you for being a part of our incredible family of supporters. Your gift of $<%= @user.donations.last.amount %> CAD will make people the best version of themselves on days when they need their inner strength the most. With your help our volunteers will bring joy and comfort with manis, massages and gentle beard trims. We are deeply grateful for your compassion. 
+		</p>
+		
 		<br/>
 		<br/>
-		<%= image_tag "signature.png" %>
+
+		<%= image_tag attachments["signature.png"].url %>
 		<p class="singatureLine">___________________________ </p><br/><br/>
-		<apan class="singature">Leigh Boyle, <br/> Exectuve Director</span>
+		<apan class="singature">Leigh Boyle, <br/> Executive Director</span>
 		<p>P.S. Your tax receipt is attached to this email. Please be in touch if you have any questions!</p>
 		<p><a href="url"><NOBR>www.thelipstickproject.ca</NOBR></a></p>
 	</div>		

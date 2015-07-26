@@ -115,7 +115,7 @@ p{
 
 <div id="page_1">
 	<div id="dimg1">
-		<img src="logo.png" id="img1">
+		<img src="http://static1.squarespace.com/static/53c84d85e4b06d1cfa9a8ad6/t/53c988ebe4b006756b6f9e33/1437948338322/?format=750w" id="img1">
 	</div>	
 
 	<div id="id_1">
@@ -128,7 +128,7 @@ p{
 			<p>80078 3979 RR0001</p><br/>
 			
 			<span class="sinagtureImage">
-			<img src="signature.png" id="img2">
+			<img src="http://res.cloudinary.com/tlp-cdn/image/upload/v1437949049/signature_es0ux5.jpg" id="img2">
 			</span>
 			<p class="singatureLine">___________________________ </p><br/><br/>
 			<span class="singature">Leigh Boyle, <br/>Exectuve Director</span>
@@ -138,13 +138,13 @@ p{
 	<div id="id_2">
 		<p class="title">Official Tax Receipt</p>
 		<p class="subTitle">for income tax purposes</p>
-		<p class="ft1">Gift date: <%= @donation.created_at.to_s %></p>
-		<p class="ft1">Gift amount: <%= @donation.amount %></p>
+		<p class="ft1">Gift date: <%= @donation.created_at.to_date %></p>
+		<p class="ft1">Gift amount: $<%= @donation.amount.to_f %> CAD</p>
 		<p class="ft1">Donor name: <%= @donation.user.last_name %>, <%= @donation.user.first_name %></p>
 		<p class="ft1">Donor address: </p>
-		<p class="ft1">Amount eligible for tax purposes: <%= @donation.amount %></p>
+		<p class="ft1">Amount eligible for tax purposes: $<%= @donation.amount.to_f %> CAD</p>
 		<p class="ft1">Advantage: $0.00 </p>
-		<p class="ft1">Date issued: <%= Date.today.to_s %></p>
+		<p class="ft1">Date issued: <%= Date.today %></p>
 		<p>Canada Revenue Agency - <a href="url"><NOBR>www.cra-arc.gc.ca/chrts-gvng/</NOBR></a></p>
 	</div>		
 	
