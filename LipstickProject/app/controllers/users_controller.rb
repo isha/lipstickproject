@@ -13,8 +13,12 @@ class UsersController < ApplicationController
     @user.addresses << address
     @user.donations << donation
     
-    @user.save
-    redirect_to @user
+    if @user.save
+      Resque.enqueue(SendTaxReceiptEmailJob, @user.donations.last.id)
+      redirect_to @user
+    else
+      render :new
+    end
   end
 
   def show
