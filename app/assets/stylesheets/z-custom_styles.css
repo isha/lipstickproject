@@ -39,7 +39,7 @@ body {
 	cursor: pointer;
 }
 .show {
-	display: table-row;
+	display:table-row;
 }
 .after-donation{
 	position: relative;
@@ -51,6 +51,18 @@ body {
 	right:10px;
 	opacity: 0.5;
 }
-
-
+.manage-users {
+	padding: 50px;
+}
+.manage-users tr:hover {
+	background: rgba(0, 0, 0, 0.6);
+	color:white;
+}
+.manage-users td, .manage-users tr , th{
+	padding: 10px;
+	margin: 10px;
+}
+th {
+	font-style: bold;
+}
 

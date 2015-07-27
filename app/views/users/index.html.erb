@@ -2,7 +2,7 @@
 
   <%= paginate @users %>
   
-  <table>
+  <table class="u-full-width">
     <tr>
       <th> First Name </th>
       <th> Last Name </th>
@@ -15,11 +15,11 @@
         <td><%= user.email %></td>
       </tr>
       <% user.donations.each do |donation| %>
-          <tr class="collapsible-body user-<%= user.id %>" > 
+          <tr class="collapsible-body user-<%= user.id %>"> 
             <td>Amount: <%= donation.amount %></td>
             <td> Tax Receipt: <%= donation.tax_receipt_sent %></td>
             <td>
-            <%= button_to 'Resend Tax Receipt', send_tax_receipt_donation_path(donation), method: :post, remote: true %>
+            <%= button_to 'Resend Tax Receipt', send_tax_receipt_donation_path(donation), method: :post, remote: true, :class => "resend", :style =>"margin: 0 auto"%>
             </td>
           </tr>
         <% end %>

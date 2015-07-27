@@ -8,4 +8,8 @@ $(document).on('ready', function() {
 			$('.'+class_selector).addClass('show');
 		}
 	})
+
+	$('.resend').on('click', function(){
+		$(this).val('Sent');
+	})
 })
