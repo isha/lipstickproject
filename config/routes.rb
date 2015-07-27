@@ -7,9 +7,13 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'users#new'
   resources :users 
-  resources :donations
+  resources :donations do
+    member do
+      post 'send_tax_receipt'
+    end
+  end
+
   resources :charges
-  
   get '/thankyou', :to => redirect('/thankyou.html')
   mount Resque::Server.new, at: "/resque"
 

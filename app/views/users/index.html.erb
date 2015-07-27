@@ -17,9 +17,10 @@
       <% user.donations.each do |donation| %>
           <tr class="collapsible-body user-<%= user.id %>" > 
             <td>Amount: <%= donation.amount %></td>
-          </tr>
-          <tr class="collapsible-body user-<%= user.id %>">
             <td> Tax Receipt: <%= donation.tax_receipt_sent %></td>
+            <td>
+            <%= button_to 'Resend Tax Receipt', send_tax_receipt_donation_path(donation), method: :post, remote: true %>
+            </td>
           </tr>
         <% end %>
     <% end %>      
