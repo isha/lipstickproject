@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       post 'send_tax_receipt'
     end
   end
+  resources :recurring_donations 
 
   resources :charges
   get '/thankyou', :to => redirect('/thankyou.html')

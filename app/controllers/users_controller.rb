@@ -1,3 +1,4 @@
+
 class UsersController < ApplicationController
 	def new 
 		@user = User.new
@@ -7,33 +8,34 @@ class UsersController < ApplicationController
 
   def create
     address = Address.new(user_params[:addresses])
-    donation = Donation.new(user_params[:donations])
-
+    
     if User.exists?(email: user_params[:email])
       @user = User.where(email: user_params[:email]).first
     else
       @user = User.new(user_params.except(:addresses, :donations))
     end
 
+    if(!user_params[:recurring])
+      donation = Donation.new(user_params[:donations])
+      @user.donations << donation
+    else 
+      donation = RecurringDonation.new(user_params[:donations])
+    end
     @user.addresses << address
-    @user.donations << donation
-    
+    # refactor this mess into the donation and/or charge controller
     if @user.save
-      Resque.enqueue(SendTaxReceiptEmailJob, @user.donations.last.id)
-      Stripe.api_key = Rails.configuration.stripe[:secret_key]
       token = params[:stripeToken]
-      amount = @user.donations.last.amount * 100
-      # if payment is one-time
-      begin
-        charge = Stripe::Charge.create(
-          :amount => amount, #reminder: amount in cents
-          :currency => 'cad', 
-          :source => token, 
-          :description => "Example charge"
-        )
-      rescue Stripe::CardError => e
-        # the card has been declined
-      end 
+      if(!user_params[:recurring])
+        amount = @user.donations.last.amount * 100
+        Resque.enqueue(SendTaxReceiptEmailJob, @user.donations.last.id)
+        create_single_stripe_charge(amount, token)
+      else
+        amount = donation.amount * 100
+        # byebug
+        donation.create(amount, @user.id, @user.email, token)
+        # should create a new recurring donation.
+        puts 'Creating a new recurring donation.'
+      end
       redirect_to "http://www.thelipstickproject.ca/thank-you"
     else
       render :new
@@ -46,6 +48,22 @@ class UsersController < ApplicationController
 
   def index
     @users = User.page(params[:page])
+  end
+
+  def create_single_stripe_charge(amount, token) 
+    # Stripe.api_key = Rails.configuration.stripe[:secret_key]
+    Stripe.api_key = 'sk_test_47WSgDMSGAE8OrlTNbQQHAG4'
+    begin
+
+      charge = Stripe::Charge.create(
+        :amount => amount, #reminder: amount in cents
+        :currency => 'cad', 
+        :source => token, 
+        :description => "The Lipstick Project Donation"
+      )
+    rescue Stripe::CardError => e
+      # the card has been declined
+    end 
   end
 
   private
@@ -65,7 +83,7 @@ class UsersController < ApplicationController
       ],
       donations: [
         :amount
-      ]
+      ], 
     )
   end
 end
