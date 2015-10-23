@@ -2,6 +2,8 @@ $(function(){
 	console.log("LET'S DO THIS");
 	var form;
 	$('#payment-form-one').on('submit', function(event) {
+		console.log('payment form one');
+
 		form = $(this);
 		// Disable the submit button to prevent repeated clicks;
 		form.find('button').prop('disabled', true);
@@ -11,10 +13,11 @@ $(function(){
 	});
 
 	$('#payment-form-two').on('submit', function(event) {
+		console.log('payment form two');
 		form = $(this);
 		form.find('button').prop('disabled', true);
 		Stripe.card.createToken(form, stripeResponseHandler)
-
+		return false
 	});
 	// callback for createToken function;
 	function stripeResponseHandler(status, response) {

@@ -110,10 +110,10 @@
   <span class="payment-errors"></span>
   <div class="row">
     <div class="four columns">
-      <label>
+      <label class="u-full-width">
         <span>Card Number</span> 
       </label>      
-        <input type="text" size="20" data-stripe="number"/>
+      <input class="u-full-width" type="text" size="20" data-stripe="number"/>
     </div>
     <div class="six columns">
       <label>
@@ -143,13 +143,14 @@
     </div>
 
   </div> 
-    <button type="submit" id="payment-submit-button"> Give Now </button>
+    <button type="submit" class="payment-submit-button"> Give Now </button>
 
   <% end %>  
-  </div>
+</div>
+</div>
 
   <!-- THIRD FORM VIEW -->
-    <div class="container third_form_view" style="display:none">
+<div class="container third_form_view" style="display:none">
   <%= form_for :user, url: users_path, html: { id: "payment-form-one"} do |f| %>
   <div class="row">
     <div class="six columns">
@@ -209,7 +210,7 @@
       </div>  
     </div>
   <% end %>
-  <%= f.fields_for :donations do |donation_form| %>
+  <%= f.fields_for :recurring_donations do |donation_form| %>
     <div class="row">
       <div class="twelve columns">
         <p>
@@ -257,7 +258,7 @@
     </div>
 
   </div> 
-    <button type="submit" id="payment-submit-button"> Give Now </button>
+    <button type="submit" class="payment-submit-button"> Give Now </button>
 
   <% end %>  
   </div>
@@ -265,5 +266,5 @@
 </div>
 <%= javascript_include_tag "https://js.stripe.com/v2/" %>
 <script>
-    Stripe.setPublishableKey("pk_test_z7ypv3ySZ23JgbSk7kQfwm5k");
+    Stripe.setPublishableKey("pk_test_LAZaDothMSMI4ioX012ibk2V");
 </script>

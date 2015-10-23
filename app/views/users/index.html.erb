@@ -13,15 +13,26 @@
         <td><%= user.first_name %></td>
         <td><%= user.last_name %></td>
         <td><%= user.email %></td>
+        <td class="button" id ="mailing-address" style="width: 70%"> Mailing Address </td>
+        <td class="button" id="donation-details" style="width: 70%"> Donation Details </td>
       </tr>
       <% user.donations.each do |donation| %>
-          <tr class="collapsible-body user-<%= user.id %>"> 
+          <tr class="xuser-<%= user.id %>"> 
             <td>Amount: <%= donation.amount %></td>
             <td> Tax Receipt: Yes</td>
             <td>
             <%= button_to 'Resend Tax Receipt', send_tax_receipt_donation_path(donation), method: :post, remote: true, :class => "resend", :style =>"margin: 0 auto"%>
             </td>
           </tr>
+        <% end %>
+        <% user.addresses.each do |address| %>
+        <tr class="user-mailing-<%= user.id %>">
+          <td><%= address.street %></td>
+          <td><%= address.house %></td>
+          <td><%= address.postal_code %></td>
+          <td><%= address.city%></td>
+          <td><%= address.province %></td>
+        </tr>
         <% end %>
     <% end %>      
   </table>

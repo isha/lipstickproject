@@ -7,46 +7,53 @@ class RecurringDonation < ActiveRecord::Base
 	# def initialize(donation_info)
 	# end 
 
+
+	# NOTES: plan_name will be displayed on invoices and in the web interface.
+	# plan_name_amount is to make the plan_name more customer friendly
+
 	def create(amount, user_id, email, token)
-		# data base needs user_id, amount, stripe_id, current_date
-		self.user_id = user_id
-		#  Find a way to check if this plan already exists..
-		plan_name = "LipstickProject_#{amount}"
-
- # Stripe.api_key = Rails.configuration.stripe[:secret_key]
-    Stripe.api_key = 'sk_test_47WSgDMSGAE8OrlTNbQQHAG4'
-
-		# Notes: Amount must be in cents.
-		# Name will be displayed on invoices and in the web interface
-		#
+	
+		plan_name_amount = amount/100
+		plan_name = "LipstickProject_#{plan_name_amount}"
+ 	
+ 		# Stripe.api_key = Rails.configuration.stripe[:secret_key]
+    Stripe.api_key = 'sk_test_KZeR5mKmb2I9KCv6q5rXTPRs'
+	
 		# check to see if a plan with that name exists 
+		# if not create plan - then subscribe customer to it. 
+	
 		begin
 			plan = Stripe::Plan.retrieve(plan_name)
 		rescue Stripe::InvalidRequestError
-			plan = false
+			create_plan(amount, plan_name)
 		end 
-
-		#  STEP 1: MAKE A PLAN
-		if(!plan)
-			begin
-				plan = Stripe::Plan.create(
-					:amount => amount, 
-					:interval => 'month', 
-					:name => plan_name, 
-					:currency => 'cad', 
-					:id => plan_name
-				)
-			rescue Stripe::CardError => e
-				# the card has been declined.
-			end
-		end
-		# STEP 2: MAKE A CUSTOMER 
-			customer = Stripe::Customer.create(
-				'plan' => plan_name, 
-				'email' => email, 
-				'source' => token
-			)
+		create_customer(plan_name, email, token)
 
 	end 
 
+	def create_plan(amount, plan_name)
+		begin
+			plan = Stripe::Plan.create(
+				:amount => amount, 
+				:interval => 'month', 
+				:name => plan_name, 
+				:currency => 'cad', 
+				:id => plan_name
+			)
+		rescue Stripe::CardError => e
+			# the card has been declined.
+		end
+	end 
+
+	def create_customer(plan_name, email, token) 
+		customer = Stripe::Customer.create(
+			'plan' => plan_name, 
+			'email' => email, 
+			'source' => token
+		)
+	end 
+
+	def show 
+		render :thankyou
+	end 
 end

@@ -2,7 +2,7 @@ class ChargesController < ApplicationController
 	# the controller will do two things: show a 
 	# credit card form and create the actual charges
 	def create(token, amount) 
-		Stripe.api_key = "sk_test_47WSgDMSGAE8OrlTNbQQHAG4"
+		Stripe.api_key = "sk_test_KZeR5mKmb2I9KCv6q5rXTPRs4"
 		token = params[:stripeToken]
 		# if payment is one-time
 		begin
