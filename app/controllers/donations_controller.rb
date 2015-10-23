@@ -9,8 +9,7 @@ class DonationsController < ApplicationController
   end
 
   def create_single_stripe_charge(amount, token)
-  	  # Stripe.api_key = Rails.configuration.stripe[:secret_key]
-    Stripe.api_key = 'sk_test_KZeR5mKmb2I9KCv6q5rXTPRs'
+  	Stripe.api_key = Rails.configuration.stripe[:secret_key]
     begin
 
       charge = Stripe::Charge.create(

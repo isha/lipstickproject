@@ -16,8 +16,7 @@ class RecurringDonation < ActiveRecord::Base
 		plan_name_amount = amount/100
 		plan_name = "LipstickProject_#{plan_name_amount}"
  	
- 		# Stripe.api_key = Rails.configuration.stripe[:secret_key]
-    Stripe.api_key = 'sk_test_KZeR5mKmb2I9KCv6q5rXTPRs'
+ 		Stripe.api_key = Rails.configuration.stripe[:secret_key]
 	
 		# check to see if a plan with that name exists 
 		# if not create plan - then subscribe customer to it. 
@@ -51,9 +50,5 @@ class RecurringDonation < ActiveRecord::Base
 			'email' => email, 
 			'source' => token
 		)
-	end 
-
-	def show 
-		render :thankyou
 	end 
 end

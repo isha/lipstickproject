@@ -22,15 +22,6 @@ class UsersController < ApplicationController
       end 
     end
 
-    # if(!user_params[:recurring])
-    #   donation = Donation.new(user_params[:donations])
-    #   @user.donations.build
-    #   @user.donations << donation
-    # else 
-    #   donation = RecurringDonation.new(user_params[:recurring_donations])
-    #   @user.recurring_donations.build 
-    #   @user.recurring_donations << donation
-    # end
     @user.addresses << address
     # refactor this mess into the donation and/or charge controller
     if @user.save
@@ -58,21 +49,6 @@ class UsersController < ApplicationController
     @users = User.page(params[:page])
   end
 
-  # def create_single_stripe_charge(amount, token) 
-  #   # Stripe.api_key = Rails.configuration.stripe[:secret_key]
-  #   Stripe.api_key = 'sk_test_KZeR5mKmb2I9KCv6q5rXTPRs'
-  #   begin
-
-  #     charge = Stripe::Charge.create(
-  #       :amount => amount, #reminder: amount in cents
-  #       :currency => 'cad', 
-  #       :source => token, 
-  #       :description => "The Lipstick Project Donation"
-  #     )
-  #   rescue Stripe::CardError => e
-  #     # the card has been declined
-  #   end 
-  # end
 
   private
   def user_params
