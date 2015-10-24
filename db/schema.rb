@@ -28,11 +28,12 @@ ActiveRecord::Schema.define(version: 20150726185739) do
 
   create_table "donations", force: :cascade do |t|
     t.integer  "user_id",          limit: 4
-    t.string   "type",             limit: 255
+    t.string   "payment_type",     limit: 255, default: "web"
     t.integer  "amount",           limit: 4
     t.datetime "date"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.boolean  "tax_receipt_sent",             default: false
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
     t.datetime "tax_receipt_date"
     t.datetime "donation_date"
   end

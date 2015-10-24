@@ -25,14 +25,19 @@
     </div>
   </div>  
   <div class="row">
-    <div class="offset-by-two eight columns">
-      <button class="sub-initial u-full-width">Give Now</button>
+    <div class=" offset-by-two four columns">
+      <button class="sub-initial-now u-full-width">Give Now</button>
+    </div>
+    <div class="four columns">
+      <button class="sub-initial-monthly u-full-width">Give Monthly</button>
     </div>
   </div>
 </div>
 
+
+<!-- SECOND FORM VIEW -->
 <div class="container second_form_view" style="display:none">
-  <%= form_for :user, url: users_path, html: { id: "payment-form"} do |f| %>
+  <%= form_for :user, url: users_path, html: { id: "payment-form-two"} do |f| %>
   <div class="row">
     <div class="six columns">
       <p>
@@ -105,6 +110,120 @@
   <span class="payment-errors"></span>
   <div class="row">
     <div class="four columns">
+      <label class="u-full-width">
+        <span>Card Number</span> 
+      </label>      
+      <input class="u-full-width" type="text" size="20" data-stripe="number"/>
+    </div>
+    <div class="six columns">
+      <label>
+        <span>CVC</span>
+      </label>  
+        <input type="text" size="4" data-stripe="cvc"/>
+    </div>    
+  </div>
+  <div class="row">
+    <label>
+      <span> Expiration (MM/YYYY)</span>
+    </label>
+    <input type="text" size="2" data-stripe="exp-month"/>
+    <span> / </span>
+    <input type="text" size="4" data-stripe="exp-year"/>
+  </div>
+  <div class="row">
+    <div class="one column">
+      <p>
+        <%= f.check_box :accepts_marketing %>
+      </p>
+    </div>
+    <div class="eleven columns">
+      <p>
+        <%= f.label :accepts_marketing, "I would like to recieve emails and updates from the Lipstick Project" %>
+      </p>
+    </div>
+
+  </div> 
+    <button type="submit" class="payment-submit-button"> Give Now </button>
+
+  <% end %>  
+</div>
+</div>
+
+  <!-- THIRD FORM VIEW -->
+<div class="container third_form_view" style="display:none">
+  <%= form_for :user, url: users_path, html: { id: "payment-form-one"} do |f| %>
+  <div class="row">
+    <div class="six columns">
+      <p>
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name, :class =>"u-full-width", :placeholder=>"First Name" %>
+      </p>  
+    </div>  
+    <div class="six columns">
+      <p>
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name, :class =>"u-full-width" , :placeholder=>"Last Name"%>
+      </p>
+    </div>  
+  </div>
+  <div class="row">
+    <p>
+      <%= f.label :email %>
+      <%= f.text_field :email, :class =>"u-full-width", :placeholder => "Email Address" %>
+      <%= f.hidden_field :recurring, :value => true%>
+    </p>
+  </div>
+
+  <%= f.fields_for :addresses do |address_form| %>
+    <div class="row">
+      <div class="six columns">  
+        <p>
+          <%= address_form.label :street %>
+          <%= address_form.text_field :street, :class =>"u-full-width", :placeholder=>"Street Name"%>
+        </p>
+      </div>
+      <div class="six columns">  
+        <p>
+          <%= address_form.label :house %>
+          <%= address_form.text_field :house, :class =>"u-full-width" , :placeholder=>"House or Apartment Number"%>
+        </p>
+      </div> 
+    </div>
+    <div class="row">
+      <div class="four columns">
+        <p>
+          <%= address_form.label :city %>
+          <%= address_form.text_field :city, :class =>"u-full-width" , :placeholder=>"City"%>
+        </p>
+      </div>
+      <div class="four columns">
+        <p>
+          <%= address_form.label :province %>
+          <%= address_form.text_field :province, :class =>"u-full-width" , :placeholder=>"Province"%>
+        </p>
+      </div>
+      <div class="four columns">  
+        <p>
+          <%= address_form.label :postal_code %>
+          <%= address_form.text_field :postal_code , :class =>"u-full-width", :placeholder=>"Postal Code"%>
+        </p>
+      </div>  
+    </div>
+  <% end %>
+  <%= f.fields_for :recurring_donations do |donation_form| %>
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <%= donation_form.label :amount %>
+          <%= donation_form.text_field :amount , :class =>"final-amount u-full-width", :placeholder=>"Amount"%>
+        </p>
+      </div>
+    </div>
+  <% end %>
+
+  <span class="payment-errors"></span>
+  <div class="row">
+    <div class="four columns">
       <label>
         <span>Card Number</span> 
       </label>      
@@ -135,10 +254,11 @@
       <p>
         <%= f.label :accepts_marketing, "I would like to recieve emails and updates from the Lipstick Project" %>
       </p>
+
     </div>
 
   </div> 
-    <button type="submit" id="payment-submit-button"> Give Now </button>
+    <button type="submit" class="payment-submit-button"> Give Now </button>
 
   <% end %>  
   </div>
@@ -146,5 +266,5 @@
 </div>
 <%= javascript_include_tag "https://js.stripe.com/v2/" %>
 <script>
-    Stripe.setPublishableKey("<%= Rails.configuration.stripe[:publishable_key] %>");
+    Stripe.setPublishableKey(Rails.configuration.stripe[:private_key]);
 </script>

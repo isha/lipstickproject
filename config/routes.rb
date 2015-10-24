@@ -12,9 +12,10 @@ Rails.application.routes.draw do
       post 'send_tax_receipt'
     end
   end
+  resources :recurring_donations 
 
   resources :charges
-  get '/thankyou', :to => redirect('/thankyou.html')
+  get '/thankyou', :to => redirect('recurring_donations/thankyou.erb')
   mount Resque::Server.new, at: "/resque"
 
   
