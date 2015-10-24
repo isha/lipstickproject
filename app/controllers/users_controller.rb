@@ -27,12 +27,14 @@ class UsersController < ApplicationController
     if @user.save
       token = params[:stripeToken]
       if(!user_params[:recurring])
+        # is this the most reliable way to get the correct amount?
         amount = @user.donations.last.amount * 100
         Resque.enqueue(SendTaxReceiptEmailJob, @user.donations.last.id)
         donation.create_single_stripe_charge(amount, token)
         redirect_to "http://www.thelipstickproject.ca/thank-you"
       else
-        amount = donation.amount * 100
+        # see comment above
+        amount = @user.recurring_donations.last.amount * 100
         donation.create(amount, @user.id, @user.email, token)
         redirect_to '/thankyou'
       end
