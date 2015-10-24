@@ -49,6 +49,13 @@ test:
 #
 production:
   <<: *default
-  database: LipstickProject_production
-  username: LipstickProject
-  password: <%= ENV['LIPSTICKPROJECT_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  host: ec2-54-225-194-162.compute-1.amazonaws.com
+  username: marrowrjujmfin
+  database: dcqhmav5nbgn5c
+  password: <%= ENV['database_password'] %>
+  port: 5432
+
+  # database: LipstickProject_production
+  # username: LipstickProject
+  # password: <%= ENV['LIPSTICKPROJECT_DATABASE_PASSWORD'] %>
