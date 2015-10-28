@@ -19,6 +19,7 @@ class UsersController < ApplicationController
         @user = User.new(user_params.except(:addresses, :recurring_donations))
         donation = @user.recurring_donations.build(user_params[:recurring_donations])
         @user.save
+        byebug
       end 
     end
 
@@ -34,7 +35,11 @@ class UsersController < ApplicationController
         redirect_to "http://www.thelipstickproject.ca/thank-you"
       else
         # see comment above
-        amount = @user.recurring_donations.last.amount * 100
+        puts @user.recurring_donations.last
+        amount = @user.recurring_donations.last.amount * 100 
+        if(!donation)
+         donation = @user.recurring_donations.last
+        end
         donation.create(amount, @user.id, @user.email, token)
         redirect_to '/thankyou'
       end
