@@ -35,8 +35,9 @@ class UsersController < ApplicationController
         redirect_to "http://www.thelipstickproject.ca/thank-you"
       else
         # see comment above
-        puts @user.recurring_donations.last
-        amount = @user.recurring_donations.last.amount * 100 
+        puts donation
+        byebug
+        amount = user_params[:recurring]
         if(!donation)
          donation = @user.recurring_donations.last
         end

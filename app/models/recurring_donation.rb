@@ -10,7 +10,7 @@ class RecurringDonation < ActiveRecord::Base
 
 	# NOTES: plan_name will be displayed on invoices and in the web interface.
 	# plan_name_amount is to make the plan_name more customer friendly
-
+	attr_accessor :amount
 	def create(amount, user_id, email, token)
 	
 		plan_name_amount = amount/100
