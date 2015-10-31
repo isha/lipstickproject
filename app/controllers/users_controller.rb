@@ -34,12 +34,9 @@ class UsersController < ApplicationController
         redirect_to "http://www.thelipstickproject.ca/thank-you"
       else
         # see comment above
-        puts user_params[:recurring_donations][:amount]
         amount = user_params[:recurring_donations][:amount]
-         donation = @user.recurring_donations.last
-        end
         donation.create(amount, @user.id, @user.email, token)
-        redirect_to '/thankyou'
+        redirect_to "http://www.thelipstickproject.ca/thank-you-for-joining-the-icu/"
       end
     else
       render :new
