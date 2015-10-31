@@ -19,7 +19,6 @@ class UsersController < ApplicationController
         @user = User.new(user_params.except(:addresses, :recurring_donations))
         donation = @user.recurring_donations.build(user_params[:recurring_donations])
         @user.save
-        byebug
       end 
     end
 
@@ -36,8 +35,7 @@ class UsersController < ApplicationController
       else
         # see comment above
         puts donation
-        byebug
-        amount = user_params[:recurring]
+        amount = donation.amount
         if(!donation)
          donation = @user.recurring_donations.last
         end
