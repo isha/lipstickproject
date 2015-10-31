@@ -8,20 +8,25 @@ class UsersController < ApplicationController
 
   def create
     address = Address.new(user_params[:addresses])
+    # STEP 1: Create the user.
     if User.exists?(email: user_params[:email])
       @user = User.where(email: user_params[:email]).first
     else
       if(!user_params[:recurring])
         @user = User.new(user_params.except(:addresses, :donations))
-        @donation = @user.donations.build(user_params[:donations])
-        @user.save
       else 
         @user = User.new(user_params.except(:addresses, :recurring_donations))
-        @donation = @user.recurring_donations.build(user_params[:recurring_donations])
-        @user.save
       end 
     end
 
+    #STEP 2: create the donation
+    if !user_params[:recurring]
+      @donation = @user.donations.build(user_params[:donations])
+      @user.save
+    else
+      @donation = @user.recurring_donations.build(user_params[:recurring_donations])
+      @user.save
+    end
     @user.addresses << address
     # refactor this mess into the donation and/or charge controller
     if @user.save
@@ -34,6 +39,8 @@ class UsersController < ApplicationController
         redirect_to "http://www.thelipstickproject.ca/thank-you"
       else
         # see comment above
+        byebug
+        puts "from here #{@donation.amount}"
         amount = @donation.amount
         @donation.create(amount, @user.id, @user.email, token)
         redirect_to "http://www.thelipstickproject.ca/thank-you-for-joining-the-icu/"
