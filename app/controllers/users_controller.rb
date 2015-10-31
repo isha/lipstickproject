@@ -39,7 +39,6 @@ class UsersController < ApplicationController
         redirect_to "http://www.thelipstickproject.ca/thank-you"
       else
         # see comment above
-        byebug
         puts "from here #{@donation.amount}"
         amount = @donation.amount
         @donation.create(amount, @user.id, @user.email, token)
