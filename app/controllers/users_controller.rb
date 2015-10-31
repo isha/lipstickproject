@@ -13,11 +13,11 @@ class UsersController < ApplicationController
     else
       if(!user_params[:recurring])
         @user = User.new(user_params.except(:addresses, :donations))
-        donation = @user.donations.build(user_params[:donations])
+        @donation = @user.donations.build(user_params[:donations])
         @user.save
       else 
         @user = User.new(user_params.except(:addresses, :recurring_donations))
-        donation = @user.recurring_donations.build(user_params[:recurring_donations])
+        @donation = @user.recurring_donations.build(user_params[:recurring_donations])
         @user.save
       end 
     end
@@ -30,12 +30,12 @@ class UsersController < ApplicationController
         # is this the most reliable way to get the correct amount?
         amount = @user.donations.last.amount * 100
         Resque.enqueue(SendTaxReceiptEmailJob, @user.donations.last.id)
-        donation.create_single_stripe_charge(amount, token)
+        @donation.create_single_stripe_charge(amount, token)
         redirect_to "http://www.thelipstickproject.ca/thank-you"
       else
         # see comment above
-        amount = user_params[:recurring_donations][:amount]
-        donation.create(amount, @user.id, @user.email, token)
+        amount = @donation.amount
+        @donation.create(amount, @user.id, @user.email, token)
         redirect_to "http://www.thelipstickproject.ca/thank-you-for-joining-the-icu/"
       end
     else
