@@ -35,7 +35,7 @@ class UsersController < ApplicationController
       else
         # see comment above
         puts donation
-        amount = donation.amount
+        amount = user_params[:recurring_donations].amount
         if(!donation)
          donation = @user.recurring_donations.last
         end
