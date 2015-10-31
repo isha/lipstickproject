@@ -266,7 +266,7 @@
 </div>
 <%= javascript_include_tag "https://js.stripe.com/v2/" %>
 <script>
-    var env = '<%= Rails.configuration.stripe[:private_key] %>'
+    var env = '<%= Rails.configuration.stripe[:publishable_key] %>'
     console.log(env);
-    Stripe.setPublishableKey('<%= Rails.configuration.stripe[:private_key] %>');
+    Stripe.setPublishableKey('<%= Rails.configuration.stripe[:publishable_key] %>');
 </script>
