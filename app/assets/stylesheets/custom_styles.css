@@ -51,6 +51,21 @@ body {
 	right:10px;
 	opacity: 0.5;
 }
-
+.user {
+	border-style: solid;
+	border-radius: 5px;
+	padding: 10px;
+	border-width: 2px;
+	margin:5px;
+}
+.donations {
+	display: none;
+}
+.address {
+	display: none;
+}
+.title {
+	font-style: bold;
+}
 
 

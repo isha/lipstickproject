@@ -22,5 +22,22 @@ $(document).on('ready', function() {
 		}
 	});
 
+	$('.address-button').on('click', function(){
+		var address = $(this).parents('.user').find('.address');
+		toggle(address);
+	});
 
-})
+	$('.donation-button').on('click', function(){
+		var donation = $(this).parents('.user').find('.donations');
+		toggle(donation);
+	});
+
+	var toggle = function(ele){
+		if(ele.css('display') === "none"){
+			ele.css('display', 'block');
+		} else {
+			ele.css('display', 'none');
+		}
+
+	}
+});

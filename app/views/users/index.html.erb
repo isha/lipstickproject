@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
 
   <%= paginate @users %>
   
@@ -36,4 +36,78 @@
         <% end %>
     <% end %>      
   </table>
+</div> -->
+
+<div class="container">
+  
+  <div class="u-full-width list">
+  
+    <% @users.each do |user| %>
+      <div class="user" id="user-<%=user.id%>">
+        <div class="titles row">
+          <div class="fullname four columns"><h5>Name:</h5></div>
+          <div class="email four columns"><h5>Email:</h5></div>
+        </div>
+        <div class="name row">
+          <div class="fullname four columns">
+            <%= user.first_name %> <%= user.last_name %>
+          </div>
+          <div class="email four columns">
+            <%= user.email %>
+          </div>
+          <div class="buttons four columns">
+          <button class="donation-button">Donations</button>
+          <button class="address-button">Address</button>
+          </div>
+        </div>
+        <div class="address">
+          <% user.addresses.each do |address| %>
+          <table class="u-full-width">
+            <thead>
+              <tr>
+                <th>Street</th>
+                <th>House</th>
+                <th>Postal Code</th>
+                <th>City</th>
+                <th>Province</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><%= address.street %></td>
+                <td><%= address.house %></td>
+                <td><%= address.postal_code %></td>
+                <td><%= address.city %></td>
+                <td><%= address.province %></td>
+              </tr>
+            </tbody>
+          </table>
+<!--           Address 
+          <ul>
+            <li>Street: <%= address.street %></li>
+            <li>House: <%= address.house %></li>
+            <li>Postal Code: <%= address.postal_code %></li>
+            <li>City: <%= address.city%></li>
+            <li>Province: <%= address.province %></li>
+          </ul>  
+ -->          <% end %>
+        </div>
+        <div class="donations">
+        <% user.donations.each do |donation| %>
+          <div class="user-<%= user.id %> row"> 
+            <div class="four columns">            
+              Amount: <%= donation.amount %>
+            </div>
+            <div class="four columns">
+              Tax Receipt: Yes
+            </div>
+            <div class="four columns">
+              <%= button_to 'Resend Tax Receipt', send_tax_receipt_donation_path(donation), method: :post, remote: true, :class => "resend", :style =>"margin: 0 auto"%>
+            </div>
+          </div>
+        <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
