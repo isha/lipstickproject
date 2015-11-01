@@ -62,6 +62,7 @@
         </div>
         <div class="address">
           <% user.addresses.each do |address| %>
+          <h5> Address </h5>
           <table class="u-full-width">
             <thead>
               <tr>
@@ -82,18 +83,11 @@
               </tr>
             </tbody>
           </table>
-<!--           Address 
-          <ul>
-            <li>Street: <%= address.street %></li>
-            <li>House: <%= address.house %></li>
-            <li>Postal Code: <%= address.postal_code %></li>
-            <li>City: <%= address.city%></li>
-            <li>Province: <%= address.province %></li>
-          </ul>  
- -->          <% end %>
+        <% end %>
         </div>
         <div class="donations">
         <% user.donations.each do |donation| %>
+          <h5> Donation </h5>
           <div class="user-<%= user.id %> row"> 
             <div class="four columns">            
               Amount: <%= donation.amount %>
