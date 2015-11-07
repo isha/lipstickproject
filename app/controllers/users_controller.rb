@@ -30,18 +30,18 @@ class UsersController < ApplicationController
     @user.addresses << address
     # refactor this mess into the donation and/or charge controller
     if @user.save
-      token = params[:stripeToken]
+      @token = params[:stripeToken]
       if(!user_params[:recurring])
         # is this the most reliable way to get the correct amount?
         amount = @user.donations.last.amount * 100
         Resque.enqueue(SendTaxReceiptEmailJob, @user.donations.last.id)
-        @donation.create_single_stripe_charge(amount, token)
+        @donation.create_single_stripe_charge(amount, @token)
         redirect_to "http://www.thelipstickproject.ca/thank-you"
       else
         # see comment above
         puts "from here #{@donation.amount}"
         amount = @donation.amount
-        @donation.create(amount, @user.id, @user.email, token)
+        @donation.create(amount, @user.id, @user.email, @token)
         redirect_to "http://www.thelipstickproject.ca/thank-you-for-joining-the-icu/"
       end
     else
