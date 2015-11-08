@@ -19,4 +19,7 @@ $(document).ready(function(){
 		$('.final-amount').val(amount);
 	});
 
+	$('.donation-box').on('change', function(e){
+		debugger;
+	});
 });
