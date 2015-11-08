@@ -51,6 +51,13 @@ body {
 	right:10px;
 	opacity: 0.5;
 }
+.after-donation::before, .final-amount::before {
+	content: '$';
+	position: absolute;
+	top: 7px;
+	left: 10px;
+	opacity: 0.5;
+}
 .user {
 	border-style: solid;
 	border-radius: 5px;
@@ -67,5 +74,7 @@ body {
 .title {
 	font-style: bold;
 }
-
+#donation-box, #user_recurring_donations_amount, #user_donations_amount {
+	padding-left:20px;
+}
 

@@ -21,7 +21,7 @@
   </div>  
   <div class="row">
     <div class="offset-by-two eight columns after-donation">  
-      <input type="text" class="donation-box u-full-width" value="20">
+      <input type="text" class="donation-box u-full-width" id="donation-box" value="20">
     </div>
   </div>  
   <div class="row">
@@ -101,7 +101,9 @@
       <div class="twelve columns">
         <p>
           <%= donation_form.label :amount %>
-          <%= donation_form.text_field :amount , :class =>"final-amount u-full-width", :placeholder=>"Amount"%>
+          <div class="after-donation">
+            <%= donation_form.text_field :amount , :class =>"final-amount u-full-width", :placeholder=>"Amount"%>
+          </div>
         </p>
       </div>
     </div>
@@ -215,7 +217,9 @@
       <div class="twelve columns">
         <p>
           <%= donation_form.label :amount %>
+          <div class="after-donation">
           <%= donation_form.text_field :amount , :class =>"final-amount u-full-width", :placeholder=>"Amount"%>
+          </div>
         </p>
       </div>
     </div>
