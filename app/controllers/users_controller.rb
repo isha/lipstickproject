@@ -72,12 +72,14 @@ class UsersController < ApplicationController
         :postal_code,
         :city,
         :province
-      ],
+      ], 
       donations: [
-        :amount
+        :amount, 
+        :about
       ], 
       recurring_donations: [
-        :amount
+        :amount, 
+        :about
       ]
     )
   end

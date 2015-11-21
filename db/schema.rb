@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150726185739) do
+ActiveRecord::Schema.define(version: 20151121211110) do
 
   create_table "addresses", force: :cascade do |t|
     t.integer  "user_id",     limit: 4
@@ -28,14 +28,15 @@ ActiveRecord::Schema.define(version: 20150726185739) do
 
   create_table "donations", force: :cascade do |t|
     t.integer  "user_id",          limit: 4
-    t.string   "payment_type",     limit: 255, default: "web"
+    t.string   "payment_type",     limit: 255,   default: "web"
     t.integer  "amount",           limit: 4
     t.datetime "date"
-    t.boolean  "tax_receipt_sent",             default: false
-    t.datetime "created_at",                                   null: false
-    t.datetime "updated_at",                                   null: false
+    t.boolean  "tax_receipt_sent",               default: false
+    t.datetime "created_at",                                     null: false
+    t.datetime "updated_at",                                     null: false
     t.datetime "tax_receipt_date"
     t.datetime "donation_date"
+    t.text     "about",            limit: 65535
   end
 
   add_index "donations", ["user_id"], name: "index_donations_on_user_id", using: :btree
@@ -45,6 +46,7 @@ ActiveRecord::Schema.define(version: 20150726185739) do
     t.integer  "amount",     limit: 4
     t.string   "stripe_id",  limit: 255
     t.datetime "start_date"
+    t.text     "about",      limit: 65535
   end
 
   add_index "recurring_donations", ["user_id"], name: "index_recurring_donations_on_user_id", using: :btree
