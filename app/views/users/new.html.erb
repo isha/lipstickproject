@@ -135,12 +135,12 @@
   <div class="row">
     <div class="one column">
       <p>
-        <%= f.check_box :accepts_marketing, :checked => :true%>
+        <%= f.check_box :accepts_marketing,{}, "checked", "unchecked" %>
       </p>
     </div>
     <div class="eleven columns">
       <p>
-        <%= f.label :accepts_marketing, "I would like to recieve emails and updates from the Lipstick Project",  :checked=> 'true'%>
+        <%= f.label :accepts_marketing, "I would like to recieve emails and updates from the Lipstick Project" %>
       </p>
     </div>
 
