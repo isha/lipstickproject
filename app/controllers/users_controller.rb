@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 	def new 
 		@user = User.new
 		@user.addresses.build
-
+    @user.accepts_marketing = true
 	end 
 
   def create
