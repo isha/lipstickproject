@@ -17,9 +17,20 @@ $(document).ready(function(){
 		$('.third_form_view').css('display', 'block');
 		var amount = $('.donation-box').val();
 		$('.final-amount').val(amount);
+		$('.back-button').css('display', 'block');
 	});
 
 	$('.donation-box').on('change', function(e){
-		debugger;
+
 	});
+
+	$('.back-button').on('click', function(){
+		$('.first_form_view').css('display', 'block');
+		$('.third_form_view').css('display', 'none');
+		$('.second_form_view').css('display', 'none');
+		$('.back-button').css('display', 'none');
+
+	});
+
+
 });

@@ -74,6 +74,13 @@ body {
 .title {
 	font-style: bold;
 }
+.back-button {
+	position:absolute;
+	left: 50px;
+	top: 50px;
+	cursor: pointer;
+	display: none;
+}
 #donation-box, #user_recurring_donations_amount, #user_donations_amount {
 	padding-left:20px;
 }
