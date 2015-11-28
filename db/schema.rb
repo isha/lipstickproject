@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151121211110) do
+ActiveRecord::Schema.define(version: 20151128194651) do
 
   create_table "addresses", force: :cascade do |t|
     t.integer  "user_id",     limit: 4
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 20151121211110) do
     t.string  "email",             limit: 255
     t.boolean "accepts_marketing"
     t.boolean "recurring"
+    t.integer "phone_num",         limit: 4
   end
 
 end

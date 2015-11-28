@@ -62,6 +62,12 @@
         <%= f.text_field :email, :class =>"u-full-width", :placeholder => "Email Address" %>
       </p>
     </div>
+    <div class="row">
+      <p>
+        <%= f.label :phone_num, "Phone Number" %>
+        <%= f.text_field :phone_num, :class =>"u-full-width", :placeholder => "Phone Number" %>
+      </p>
+    </div>
 
     <%= f.fields_for :addresses do |address_form| %>
       <div class="row">
